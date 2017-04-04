@@ -4,7 +4,7 @@
     .main-navigation{
         width:100%;
         height:70px;
-        background-color:hsla(244, 74%, 50%, 0.44);
+        background-color:#F5EA9B;
         position:fixed;
         top:0;
     }
@@ -14,9 +14,17 @@
 		width:100vw;
 		display:flex;
 		justify-content:center;
-		background:linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% );
-		background-size:cover;
-		background-repeat:no-repeat;
+		// animation:fade-in 0.5s ease-in forwards;
+		// opacity:0;
+	}
+
+	@keyframes fade-in{
+		0%{
+			opacity:0;
+		}
+		100%{
+			opacity:1;
+		}
 	}
 
 	.home-hero{
@@ -28,12 +36,13 @@
 	.social-icons-container{
     	height:80px;
     	width:100%;
-    	background-color:rgba(46, 33, 222, 0.67);
+    	background-color:#F5EA9B;
     	display:flex;
     	justify-content:center;
     	align-items:center;
+		box-shadow: 0 -12px 69px -3px white;
         	i{
-            	color:white;
+            	color:black;
             	padding:1rem;
             	font-size:1.5rem;
             	height:50px;
@@ -48,16 +57,48 @@
 	.hero-button{
 		align-self: flex-end;
 		position:absolute;
-		transform:translateY(-2rem);
 		display: flex;
     	justify-content: center;
     	align-items: center;
 		color:white;
 		font-size:1.5rem;
 		text-decoration:none;
-		border:2px solid white;
+		box-shadow:0px 5px #fff;
+		border-radius:12px;
 		text-transform:uppercase;
-		background-color:rgba(18, 0, 255, 0.32);
+		background-color:#2e44ce;
+		bottom:14rem;
+		transition:all 0.2s ease;
+		font-family:'raleway';
+			&:active{
+				transform:translate(0, 5px);
+				box-shadow:none;
+			}
+			&:hover{
+				background-color:white;
+				color:#2e44ce;
+				border-radius:12px;
+				box-shadow:0px 5px 5px 10px #f4f4f2;
+			}
+		}
+
+	.main-navigation{
+		box-shadow: -20px 19px 69px 9px white;
 	}
+	
+
+	//News Section
+
+	.section-header{
+		text-align:center;
+		text-transform:uppercase;
+		font-family:'raleway';
+		padding:10px 0;
+		font-size:2rem;
+		margin:0;
+		background-color:rgb(38, 47, 101);
+		color:white;
+	}
+
 
 }//Home Wraper

@@ -29,8 +29,13 @@ get_header(); ?>
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                 </div>
             </div>
+        <!--<section>
+            <h3 class="section-header">Gallery</h3>
+        </section>-->
         <section>
-            <h3>Gallery</h3>
+            <div class="header-container">
+                <h3 class="section-header">News<h3>
+            </div>
         </section>
 
 
