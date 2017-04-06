@@ -29,13 +29,25 @@ get_header(); ?>
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                 </div>
             </div>
-        <!--<section>
-            <h3 class="section-header">Gallery</h3>
-        </section>-->
         <section>
             <div class="header-container">
                 <h3 class="section-header">News<h3>
             </div>
+            <div class="news-post-wrapper">
+                <?php
+                $args = array( 'numberposts' =>3, 'order' => 'DESC', 'orderby' => 'date');
+                $myposts = get_posts( $args );
+                foreach( $myposts as $post):
+                setup_postdata($post);?>
+                <div class="news-post-container">
+                    <div class="front-news-image"><?php the_post_thumbnail('large'); ?></div>
+                    <h1 class="news-title">
+                        <a href="<?php the_permalink();?>"><?php the_title();?></a>
+                    </h1>
+                </div><!--news-post-container-->
+                <?php endforeach;
+                wp_reset_postdata(); ?> 
+            </div><!--news-post-wrapper-->
         </section>
 
 

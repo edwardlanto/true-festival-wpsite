@@ -10,12 +10,11 @@
     }
 
 	.hero-container{
-		height:75%;
+		height:600px;
 		width:100vw;
 		display:flex;
 		justify-content:center;
-		// animation:fade-in 0.5s ease-in forwards;
-		// opacity:0;
+		position:relative;
 	}
 
 	@keyframes fade-in{
@@ -67,7 +66,7 @@
 		border-radius:12px;
 		text-transform:uppercase;
 		background-color:#2e44ce;
-		bottom:14rem;
+		bottom:4rem;
 		transition:all 0.2s ease;
 		font-family:'raleway';
 			&:active{
@@ -98,6 +97,19 @@
 		margin:0;
 		background-color:rgb(38, 47, 101);
 		color:white;
+	}
+
+	.news-post-container{
+		position:relative;
+			img{
+				width:100vw;
+			}
+	}
+
+	.news-title{
+		position: absolute;
+    	left: 40%;
+    	bottom: 35%;
 	}
 
 

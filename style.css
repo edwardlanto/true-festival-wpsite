@@ -51,12 +51,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   top: 0; }
 
 .home .hero-container {
-  height: 75%;
+  height: 600px;
   width: 100vw;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  position: relative; }
 
 @keyframes fade-in {
   0% {
@@ -109,7 +110,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border-radius: 12px;
   text-transform: uppercase;
   background-color: #2e44ce;
-  bottom: 14rem;
+  bottom: 4rem;
   transition: all 0.2s ease;
   font-family: 'raleway'; }
   .home .hero-button:active {
@@ -133,6 +134,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   margin: 0;
   background-color: #262f65;
   color: white; }
+
+.home .news-post-container {
+  position: relative; }
+  .home .news-post-container img {
+    width: 100vw; }
+
+.home .news-title {
+  position: absolute;
+  left: 40%;
+  bottom: 35%; }
 
 html {
   font-family: sans-serif;
