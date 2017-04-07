@@ -27,6 +27,12 @@ function load_jquery(){
 
 add_action('wp_enqeue_scripts','load_jquery');
 
+function custom_excerpt_length($length){
+	return 50;
+}
+
+add_filter('excerpt_length','custom_excerpt_length');
+
 
 
 

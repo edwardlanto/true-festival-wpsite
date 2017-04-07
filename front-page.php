@@ -31,7 +31,7 @@ get_header(); ?>
             </div>
         <section>
             <div class="header-container">
-                <h3 class="section-header">News<h3>
+                <h3 class="section-header">News</h3>
             </div>
             <div class="news-post-wrapper">
                 <?php
@@ -40,10 +40,19 @@ get_header(); ?>
                 foreach( $myposts as $post):
                 setup_postdata($post);?>
                 <div class="news-post-container">
-                    <div class="front-news-image"><?php the_post_thumbnail('large'); ?></div>
+                    <div class="news-date"><?php red_starter_posted_on(); ?></div>
+                    <div class="front-news-image-container">
+                            <div class="news-gradient"></div>
+                            <div><?php the_post_thumbnail('small'); ?></div>
+                    </div><!--front-news-image-container-->
                     <h1 class="news-title">
                         <a href="<?php the_permalink();?>"><?php the_title();?></a>
                     </h1>
+                    <div class="news-excerpt-container">
+                        <?php the_excerpt(10); ?>
+                        <a href="<?php the_permalink() ?>" class="read-more-news">Read More </a>
+                    </div>
+                    
                 </div><!--news-post-container-->
                 <?php endforeach;
                 wp_reset_postdata(); ?> 
