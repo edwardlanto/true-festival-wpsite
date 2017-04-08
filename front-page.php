@@ -10,7 +10,15 @@
 
 get_header(); ?>
 	<div id="primary" class="content-area">
-		  <main id="main" class="site-main" role="main">
+	    <main id="main" class="site-main" role="main">
+        <div class="folding-cube-container">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
             <div class="hero-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero-image.jpg" class="home-hero">
                 <a href="#" class="general-button hero-button">Buy Tickets</a>
@@ -33,7 +41,7 @@ get_header(); ?>
             <div class="header-container">
                 <h3 class="section-header">News</h3>
             </div>
-            <div class="news-post-wrapper">
+            <div class="news-post-wrapper fadein">
                 <?php
                 $args = array( 'numberposts' =>3, 'order' => 'DESC', 'orderby' => 'date');
                 $myposts = get_posts( $args );
@@ -50,7 +58,7 @@ get_header(); ?>
                     </h1>
                     <div class="news-excerpt-container">
                         <?php the_excerpt(10); ?>
-                        <a href="<?php the_permalink() ?>" class="read-more-news">Read More </a>
+                        <a href="<?php the_permalink() ?>" class="read-more-news"><span>Read More</span></a>
                     </div>
                     
                 </div><!--news-post-container-->
@@ -58,7 +66,6 @@ get_header(); ?>
                 wp_reset_postdata(); ?> 
             </div><!--news-post-wrapper-->
         </section>
-
 
 
 

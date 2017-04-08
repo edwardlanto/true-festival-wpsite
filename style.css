@@ -191,7 +191,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   color: #fff;
   padding: .5rem 1.5rem;
   bottom: 12rem;
-  left: 30%;
+  left: 0%;
   text-transform: uppercase;
   width: 200px;
   bottom: 15px; }
@@ -212,9 +212,37 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       align-self: flex-end;
   text-decoration: none;
   background-color: white;
-  padding: 5 20px;
+  width: 200px;
+  height: 50px;
   text-transform: uppercase;
   color: black;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 500ms ease;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .home .read-more-news span {
+    z-index: 10; }
+  .home .read-more-news:hover {
+    color: white; }
+
+.home .read-more-news:before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 100px;
+  background-color: #262f65;
+  color: white;
+  border-radius: 15px;
+  transition: all 0.5s ease; }
+
+.home .read-more-news:hover:before {
+  width: 100%;
   border-radius: 15px; }
 
 .home .news-post-container:first-child {
@@ -227,8 +255,73 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   margin-top: 2rem;
   border-radius: 5%; }
 
-.home .body {
-  overflow-x: hidden; }
+.home .fadein {
+  opacity: 0; }
+
+.home .folding-cube-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.home .sk-folding-cube {
+  margin: 20px auto;
+  width: 95px;
+  height: 95px;
+  position: relative;
+  transform: rotate(45deg) translate(-80%, -65%); }
+
+.home .sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1); }
+
+.home .sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: sk-foldCubeAngle 2.4s infinite linear both;
+  transform-origin: 100% 100%; }
+
+.home .sk-folding-cube .sk-cube2 {
+  transform: scale(1.1) rotateZ(90deg); }
+
+.home .sk-folding-cube .sk-cube3 {
+  transform: scale(1.1) rotateZ(180deg); }
+
+.home .sk-folding-cube .sk-cube4 {
+  transform: scale(1.1) rotateZ(270deg); }
+
+.home .sk-folding-cube .sk-cube2:before {
+  animation-delay: 0.3s; }
+
+.home .sk-folding-cube .sk-cube3:before {
+  animation-delay: 0.6s; }
+
+.home .sk-folding-cube .sk-cube4:before {
+  animation-delay: 0.9s; }
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; }
+  25%, 75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1; }
+  90%, 100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0; } }
 
 html {
   font-family: sans-serif;
@@ -568,7 +661,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden; }
 
 blockquote, q {
   quotes: "" ""; }
