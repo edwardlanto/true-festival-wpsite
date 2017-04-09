@@ -88,6 +88,7 @@ get_header(); ?>
                     endwhile; 
                 ?>
             </ul>
+            <a href="<?php echo get_post_type_archive_link('artist_post_type'); ?>">Full Lineup</a>
 
         </section>
 
