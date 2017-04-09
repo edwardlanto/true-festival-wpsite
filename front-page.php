@@ -60,12 +60,37 @@ get_header(); ?>
                         <?php the_excerpt(10); ?>
                         <a href="<?php the_permalink() ?>" class="read-more-news"><span>Read More</span></a>
                     </div>
-                    
                 </div><!--news-post-container-->
                 <?php endforeach;
                 wp_reset_postdata(); ?> 
             </div><!--news-post-wrapper-->
         </section>
+        <div class="header-container">
+            <h3 class="section-header">Artists</h3>
+        </div>
+        <section class="artist-section">
+            <ul class="main-carousel">
+                <?php 
+                    $loop = new WP_query(array('post_type' => 'artist_post_type', 'posts_per_page' => -1)); 
+                ?>
+                <?php 
+                    while ( $loop -> have_posts() ) : $loop -> the_post(); 
+                ?>
+                <li class="carousel-cell artist-list-item">
+                    <a href="<?php the_permalink() ?>">
+                        <h3 class="artist-header"><?php the_title(); ?></h3>
+                        <div class="artist-image-container">
+                            <?php the_post_thumbnail('full'); ?>
+                        </div>
+                    </a>
+                <li>
+                <?php 
+                    endwhile; 
+                ?>
+            </ul>
+
+        </section>
+
 
 
 

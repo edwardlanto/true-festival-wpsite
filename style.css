@@ -68,7 +68,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .home-hero {
   margin-top: 70px;
   object-fit: cover;
-  z-index: -1; }
+  z-index: -1;
+  max-width: 100%; }
 
 .home .social-icons-container {
   height: 80px;
@@ -112,7 +113,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   background-color: #2e44ce;
   bottom: 4rem;
   transition: all 0.2s ease;
-  font-family: 'raleway'; }
+  font-family: 'montserratmedium'; }
   .home .hero-button:active {
     transform: translate(0, 5px);
     box-shadow: none; }
@@ -126,6 +127,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   box-shadow: -20px 19px 69px 9px white;
   z-index: 20; }
 
+.home .section-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'raleway';
+  padding: 10px 0;
+  font-size: 2rem;
+  margin: 0;
+  background-color: #262f65;
+  color: white; }
+
 .home .news-post-wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -136,16 +147,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   padding: 30px 15px 0 15px;
   background-color: black;
   padding-bottom: 5rem; }
-
-.home .section-header {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'raleway';
-  padding: 10px 0;
-  font-size: 2rem;
-  margin: 0;
-  background-color: #262f65;
-  color: white; }
 
 .home .news-post-container {
   position: relative;
@@ -166,7 +167,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'raleway';
+    font-family: 'montserrat';
     border-radius: 8px; }
 
 .home .front-news-image-container {
@@ -204,14 +205,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .home .news-excerpt-container p {
     color: white;
     font-size: 14px;
-    font-family: 'raleway';
+    font-family: 'montserrat';
     max-width: 288px; }
 
 .home .read-more-news {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-decoration: none;
-  background-color: white;
+  background-color: #f5ea9b;
   width: 200px;
   height: 50px;
   text-transform: uppercase;
@@ -219,26 +220,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  transition: all 500ms ease;
+  transition: all 0.2s ease;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
+  font-family: 'montserratmedium'; }
   .home .read-more-news span {
-    z-index: 10; }
+    z-index: 10;
+    margin: 0 auto;
+    margin-top: 13.5px;
+    font-family: 'montserratmedium'; }
   .home .read-more-news:hover {
-    color: white; }
+    color: black;
+    transform: translateY(-10px); }
 
 .home .read-more-news:before {
   content: '';
   position: absolute;
   width: 0px;
   height: 100px;
-  background-color: #262f65;
-  color: white;
-  border-radius: 15px;
+  background-color: white;
+  color: black;
   transition: all 0.5s ease; }
 
 .home .read-more-news:hover:before {
@@ -322,6 +323,88 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   90%, 100% {
     transform: perspective(140px) rotateY(180deg);
     opacity: 0; } }
+
+.home .artist-section {
+  height: 700px;
+  padding: 3rem 0;
+  background: url("../../images/black-background-design.jpg");
+  background-size: cover; }
+
+.home .main-carousel {
+  padding: 0;
+  margin: 0; }
+  .home .main-carousel button {
+    background-color: #000;
+    height: 40px;
+    border-radius: 50%;
+    opacity: .6;
+    box-shadow: none;
+    width: 40px; }
+  .home .main-carousel .previous {
+    left: 5%; }
+  .home .main-carousel .next {
+    right: 5%; }
+
+.home .carousel-cell.is-selected {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.home .artist-list-item {
+  position: relative;
+  width: 100vw; }
+  .home .artist-list-item img {
+    width: 100vw;
+    border-radius: 50%;
+    margin: 0 auto;
+    height: 60vh;
+    max-width: 500px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    border: 9px solid #908c6d; }
+  .home .artist-list-item h3 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    text-shadow: 5px 12px 25px #000000;
+    font-size: 3rem;
+    color: #F5EA9B;
+    max-width: 20rem;
+    font-family: 'montserratbold'; }
+  .home .artist-list-item a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+
+.home .artist-image-container {
+  background: none;
+  border-radius: 50%;
+  transition: background 0.5s linear;
+  margin-top: 30px; }
+  .home .artist-image-container:hover {
+    background: rgba(226, 226, 226, 0.3); }
+
+.home .carousel-cell.is-selected .artist-header {
+  animation-name: header-move;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-delay: 0.2s; }
+
+@keyframes header-move {
+  from {
+    transform: rotateX(0deg);
+    text-shadow: -22rem 4px 25px #000; }
+  to {
+    transform: rotateX(360deg);
+    text-shadow: 5px 12px 25px #000000; } }
 
 html {
   font-family: sans-serif;
@@ -532,32 +615,95 @@ th {
   font-style: normal; }
 
 @font-face {
-  font-family: 'ralewayextrabold_italic';
+  font-family: 'raleway';
   src: url("../../fonts/raleway-extrabolditalic-webfont.eot");
   src: url("../../fonts/raleway-extrabolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-extrabolditalic-webfont.woff2") format("woff2"), url("../../fonts/raleway-extrabolditalic-webfont.woff") format("woff"), url("../../fonts/raleway-extrabolditalic-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-weight: bold;
+  font-style: italic; }
 
 @font-face {
-  font-family: 'ralewayextralight';
+  font-family: 'raleway';
   src: url("../../fonts/raleway-extralight-webfont.eot");
   src: url("../../fonts/raleway-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-extralight-webfont.woff2") format("woff2"), url("../../fonts/raleway-extralight-webfont.woff") format("woff"), url("../../fonts/raleway-extralight-webfont.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: lighter;
   font-style: normal; }
 
 @font-face {
-  font-family: 'ralewayextralight_italic';
-  src: url("r../../fonts/aleway-extralightitalic-webfont.eot");
-  src: url("r../../fonts/aleway-extralightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("r../../fonts/aleway-extralightitalic-webfont.woff2") format("woff2"), url("r../../fonts/aleway-extralightitalic-webfont.woff") format("woff"), url("r../../fonts/aleway-extralightitalic-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'raleway';
+  src: url("../../fonts/raleway-extralightitalic-webfont.eot");
+  src: url("../../fonts/raleway-extralightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-extralightitalic-webfont.woff2") format("woff2"), url("../../fonts/raleway-extralightitalic-webfont.woff") format("woff"), url("../../fonts/raleway-extralightitalic-webfont.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: italic; }
 
 @font-face {
-  font-family: 'ralewayitalic';
+  font-family: 'raleway';
   src: url("raleway-italic-webfont.eot");
   src: url("raleway-italic-webfont.eot?#iefix") format("embedded-opentype"), url("raleway-italic-webfont.woff2") format("woff2"), url("raleway-italic-webfont.woff") format("woff"), url("raleway-italic-webfont.ttf") format("truetype");
   font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-black-webfont.eot");
+  src: url("../../fonts/montserrat-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-black-webfont.woff2") format("woff2"), url("../../fonts/montserrat-black-webfont.woff") format("woff"), url("../../fonts/montserrat-black-webfont.svg#montserratblack") format("svg");
+  font-weight: bolder;
   font-style: normal; }
+
+@font-face {
+  font-family: 'montserratbold';
+  src: url("../../fonts/montserrat-bold-webfont.eot");
+  src: url("../../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-bold-webfont.woff") format("woff"), url("../../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  font-weight: bolder;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-extrabold-webfont.eot");
+  src: url("../../fonts/montserrat-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-extrabold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-extrabold-webfont.woff") format("woff"), url("../../fonts/montserrat-extrabold-webfont.svg#montserratextrabold") format("svg");
+  font-weight: bolder;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-extralight-webfont.eot");
+  src: url("../../fonts/montserrat-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-extralight-webfont.woff2") format("woff2"), url("../../fonts/montserrat-extralight-webfont.woff") format("woff"), url("../../fonts/montserrat-extralight-webfont.svg#montserratextralight") format("svg");
+  font-weight: lighter;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-light-webfont.eot");
+  src: url("../../fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../../fonts/montserrat-light-webfont.woff") format("woff"), url("../../fonts/montserrat-light-webfont.svg#montserratlight") format("svg");
+  font-weight: lighter;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserratmedium';
+  src: url("../../fonts/montserrat-medium-webfont.eot");
+  src: url("../../fonts/montserrat-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-medium-webfont.woff2") format("woff2"), url("../../fonts/montserrat-medium-webfont.woff") format("woff"), url("../../fonts/montserrat-medium-webfont.svg#montserratmedium") format("svg");
+  font-weight: bolder;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-regular-webfont.eot");
+  src: url("../../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../../fonts/montserrat-regular-webfont.woff") format("woff"), url("../../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-semibold-webfont.eot");
+  src: url("../../fonts/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("../../fonts/montserrat-semibold-webfont.woff") format("woff"), url("../../fonts/montserrat-semibold-webfont.svg#montserratsemibold") format("svg");
+  font-weight: bolder;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../../fonts/montserrat-thin-webfont.eot");
+  src: url("../../fonts/montserrat-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-thin-webfont.woff2") format("woff2"), url("../../fonts/montserrat-thin-webfont.woff") format("woff"), url("../../fonts/montserrat-thin-webfont.svg#montserratthin") format("svg");
+  font-weight: normal;
+  font-style: lighter; }
 
 @font-face {
   font-family: 'ralewaylight';
@@ -567,21 +713,21 @@ th {
   font-style: normal; }
 
 @font-face {
-  font-family: 'ralewaylight_italic';
+  font-family: 'raleway';
   src: url("raleway-lightitalic-webfont.eot");
   src: url("raleway-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("raleway-lightitalic-webfont.woff2") format("woff2"), url("raleway-lightitalic-webfont.woff") format("woff"), url("raleway-lightitalic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'ralewaymedium';
+  font-family: 'raleway';
   src: url("../../fonts/raleway-medium-webfont.eot");
   src: url("../../fonts/raleway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-medium-webfont.woff2") format("woff2"), url("../../fonts/raleway-medium-webfont.woff") format("woff"), url("../../fonts/raleway-medium-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'ralewayregular';
+  font-family: 'raleway';
   src: url("../../fonts/raleway-regular-webfont.eot");
   src: url("../../fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-regular-webfont.woff2") format("woff2"), url("../../fonts/raleway-regular-webfont.woff") format("woff"), url("../../fonts/raleway-regular-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -679,7 +825,7 @@ ul, ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
   list-style: decimal; }
@@ -697,13 +843,14 @@ dd {
 
 img {
   height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
+  /* Make sure images are scaled correctly. */ }
 
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+* {
+  font-family: 'montserrat'; }
 
 /*--------------------------------------------------------------
 # Forms

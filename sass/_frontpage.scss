@@ -30,6 +30,7 @@
 		margin-top:70px;
 		object-fit:cover;
 		z-index:-1;
+		max-width:100%;
     }
 
 	.social-icons-container{
@@ -68,7 +69,7 @@
 		background-color:#2e44ce;
 		bottom:4rem;
 		transition:all 0.2s ease;
-		font-family:'raleway';
+		font-family:'montserratmedium';
 			&:active{
 				transform:translate(0, 5px);
 				box-shadow:none;
@@ -85,6 +86,17 @@
 		box-shadow: -20px 19px 69px 9px white;
 		z-index:20;
 	}
+
+	.section-header{
+		text-align:center;
+		text-transform:uppercase;
+		font-family:'raleway';
+		padding:10px 0;
+		font-size:2rem;
+		margin:0;
+		background-color:rgb(38, 47, 101);
+		color:white;
+	}
 	
 
 	//News Section
@@ -96,17 +108,6 @@
 		padding:30px 15px 0 15px;
 		background-color:black;
 		padding-bottom:5rem;
-	}
-
-	.section-header{
-		text-align:center;
-		text-transform:uppercase;
-		font-family:'raleway';
-		padding:10px 0;
-		font-size:2rem;
-		margin:0;
-		background-color:rgb(38, 47, 101);
-		color:white;
 	}
 
 	.news-post-container{
@@ -130,7 +131,7 @@
 				color:white;
 				text-decoration:none;
 				text-transform:uppercase;
-				font-family:'raleway';
+				font-family:'montserrat';
 				border-radius:8px;
 			}
 	}
@@ -171,7 +172,7 @@
 			p{
 				color:white;
 				font-size:14px;
-				font-family:'raleway';
+				font-family:'montserrat';
 				max-width:288px;
 			}
 	}
@@ -179,7 +180,7 @@
 	.read-more-news{
 		align-self:flex-end;
 		text-decoration:none;
-		background-color:white;
+		background-color:#f5ea9b;
 		width:200px;
 		height:50px;
 		text-transform:uppercase;
@@ -187,15 +188,18 @@
 		border-radius:15px;
 		overflow:hidden;
 		position:relative;
-		transition:all 500ms ease;
+		transition:all 0.2s ease;
 		display: flex;
-    	justify-content: center;
-    	align-items: center;
+		font-family:'montserratmedium';
 			span{
 				z-index:10;
+				margin: 0 auto;
+    			margin-top: 13.5px;
+				font-family:'montserratmedium';
 			}
 			&:hover{
-				color:white;
+				color:black;
+				transform:translateY(-10px);
 			}
 	}
 
@@ -204,10 +208,10 @@
 		position: absolute;
 		width: 0px;
 		height: 100px;
-		background-color: #262f65;
-		color:white;
-		border-radius: 15px;
+		background-color: white;
+		color:black;
 		transition: all 0.5s ease;
+		
 	}
 
 	.read-more-news:hover:before{
@@ -332,6 +336,110 @@
 				transform: perspective(140px) rotateY(180deg);
 		opacity: 0; 
 	}
+	}
+
+
+	//Artist Carousel
+
+	.artist-section{
+		height:700px;
+		padding:3rem 0;
+		background:url('../../images/black-background-design.jpg');
+		background-size:cover;
+	}
+
+	.main-carousel{
+		padding:0;
+		margin:0;
+		button{
+			background-color: #000;
+    		height: 40px;
+    		border-radius: 50%;
+    		opacity: .6;
+    		box-shadow: none;
+   			width: 40px;
+		}
+		.previous{
+			left:5%;
+		}
+		.next{
+			right:5%;
+		}
+	}
+
+	.carousel-cell.is-selected{
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+		// transition:background 0.5s ease;
+		// transform:translatey(-30px);
+	}
+
+	.artist-list-item{
+		position:relative;
+		width:100vw;
+		img{
+			width: 100vw;
+    		border-radius: 50%;
+    		margin: 0 auto;
+    		height: 60vh;
+    		max-width: 500px;
+    		object-fit: cover;
+			position:relative;
+			z-index:-1;
+			border: 9px solid #908c6d;
+		}
+		h3{
+			position:absolute;
+			text-align: center;
+			width:100%;
+			text-transform:uppercase;
+			text-shadow: 5px 12px 25px #000000;
+			font-size:3rem;
+			color:#F5EA9B;
+			max-width:20rem;
+			font-family:'montserratbold';
+		}
+		a{
+			display: flex;
+    		justify-content: center;
+    		align-items: center;
+		}
+	}
+
+	.artist-image-container{
+		background:none;
+		border-radius:50%;
+		transition:background 0.5s linear;
+		margin-top:30px;
+			&:hover{
+				background:rgba(226,226,226,0.3	);
+			}
+	}
+
+	.carousel-cell.is-selected{
+		.artist-header{
+			animation-name:header-move;
+			animation-duration:0.5s;
+			animation-timing-function:linear;
+			animation-delay:0.2s
+		}
+		// .artist-image-container{
+		// 	animation-name:image-flip;
+		// 	animation-duration:0.3s;
+		// 	animation-timing-function:linear;
+		// }
+	}
+
+	@keyframes header-move{
+		from{
+			transform:rotateX(0deg);
+			text-shadow: -22rem 4px 25px #000;
+		}
+		to{
+			transform:rotateX(360deg);
+			text-shadow: 5px 12px 25px #000000;
+		}
 	}
 
 }//Home Wraper
