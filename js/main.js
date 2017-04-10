@@ -14,6 +14,16 @@
         }); 
     });
 
+
+    // $(window).scroll(function(){
+    // event.preventDefault();
+    // var y = $(window).scrollTop();
+    // var slider = $('.image-slider').scrollTop();
+    // if (y >= slider){
+    //   $('.gallery-image-container').addClass('image-slider');
+    //     }
+    // })
+
 })(jQuery)
 
 
