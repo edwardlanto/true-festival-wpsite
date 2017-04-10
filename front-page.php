@@ -11,17 +11,17 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 	    <main id="main" class="site-main" role="main">
-        <div class="folding-cube-container">
+        <!--<div class="folding-cube-container">
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
                 <div class="sk-cube4 sk-cube"></div>
                 <div class="sk-cube3 sk-cube"></div>
             </div>
-        </div>
+        </div>-->
             <div class="hero-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero-image.jpg" class="home-hero">
-                <a href="#" class="general-button hero-button">Buy Tickets</a>
+                <a href="https://www.eventbrite.ca/e/true-north-music-festival-tickets-32441901601" class="general-button hero-button">Buy Tickets</a>
             </div><!--hero-container-->
             <div class="social-icons-container">
                 <div>
@@ -69,6 +69,9 @@ get_header(); ?>
             <h3 class="section-header">Artists</h3>
         </div>
         <section class="artist-section">
+            <div class="archive-header-container">
+                <a href="<?php echo get_post_type_archive_link('artist_post_type'); ?>">Full Lineup</a>
+            </div>
             <ul class="main-carousel">
                 <?php 
                     $loop = new WP_query(array('post_type' => 'artist_post_type', 'posts_per_page' => -1)); 
@@ -88,9 +91,22 @@ get_header(); ?>
                     endwhile; 
                 ?>
             </ul>
-            <a href="<?php echo get_post_type_archive_link('artist_post_type'); ?>">Full Lineup</a>
-
         </section>
+        <section class="venue-section">
+            <h3 class="section-header">Venue</h3>
+            <div class="map-content-container">
+                <div class="location-marker-container">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <h2>Location</h2>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.349470115585!2d-79.35678208442066!3d43.64089697912185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb1edc1adaeb%3A0x7f0cc8bf3c3be45e!2s11+Polson+St%2C+Toronto%2C+ON+M5A+1A4!5e0!3m2!1sen!2sca!4v1491793278417" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="content-container">
+                </div>
+            </div>
+
+
 
 
 

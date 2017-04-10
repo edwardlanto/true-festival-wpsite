@@ -350,6 +350,20 @@
 
 	//Artist Carousel
 
+	.archive-header-container{
+		width:100%;
+    	display: flex;
+    	justify-content: center;
+			a{
+				padding: 10px 30px;
+				background-color: #f5ea9b;
+				font-family: 'montserratmedium';
+				text-decoration: none;
+				text-transform: uppercase;
+				border-radius: 15px;
+			}
+	}
+
 	.artist-section{
 		height:700px;
 		padding:3rem 0;
@@ -380,8 +394,6 @@
 		display: flex;
     	justify-content: center;
     	align-items: center;
-		// transition:background 0.5s ease;
-		// transform:translatey(-30px);
 	}
 
 	.artist-list-item{
@@ -448,6 +460,42 @@
 		to{
 			transform:rotateX(360deg);
 			text-shadow: 5px 12px 25px #000000;
+		}
+	}
+
+	//Venue Section
+
+	.venue-section{
+		background-color:#fff;
+		height:700px;
+	}
+
+	.map{
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+		padding: 0 3rem;
+		iframe{
+			max-width:none;
+		}
+	}
+
+	.location-marker-container{
+		display: flex;
+    	justify-content: flex-start;
+    	margin: 2rem;
+	}
+
+	.map-content-container{
+		h2{
+			text-align:center;
+			text-transform:uppercase;
+			font-family:'raleway';
+			margin-left:2rem;
+			font-size:2rem;
+		}
+		.fa-map-marker{
+			font-size:5rem;
 		}
 	}
 

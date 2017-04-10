@@ -330,6 +330,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     transform: perspective(140px) rotateY(180deg);
     opacity: 0; } }
 
+.home .archive-header-container {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .home .archive-header-container a {
+    padding: 10px 30px;
+    background-color: #f5ea9b;
+    font-family: 'montserratmedium';
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px; }
+
 .home .artist-section {
   height: 700px;
   padding: 3rem 0;
@@ -411,6 +425,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   to {
     transform: rotateX(360deg);
     text-shadow: 5px 12px 25px #000000; } }
+
+.home .venue-section {
+  background-color: #fff;
+  height: 700px; }
+
+.home .map {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0 3rem; }
+  .home .map iframe {
+    max-width: none; }
+
+.home .map-content-container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'raleway'; }
+
+.home .map-content-container .fa-map-marker {
+  font-size: 5rem; }
 
 html {
   font-family: sans-serif;
