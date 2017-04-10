@@ -466,15 +466,11 @@
 	//Venue Section
 
 	.venue-section{
-		background-color:#fff;
+		background-color:white;
 		height:700px;
 	}
 
 	.map{
-		display: flex;
-    	justify-content: center;
-    	align-items: center;
-		padding: 0 3rem;
 		iframe{
 			max-width:none;
 		}
@@ -487,16 +483,31 @@
 	}
 
 	.map-content-container{
+		padding:0 2rem;
+		display: flex;
+    	flex-direction: column;
+    	justify-content: center;
 		h2{
 			text-align:center;
 			text-transform:uppercase;
 			font-family:'raleway';
 			margin-left:2rem;
 			font-size:2rem;
+			color:black;
 		}
 		.fa-map-marker{
 			font-size:5rem;
+			color:black;
 		}
 	}
+
+	//Gallery Section
+
+	.gallery-list{
+		padding:0;
+		margin:0;
+	}
+
+	
 
 }//Home Wraper

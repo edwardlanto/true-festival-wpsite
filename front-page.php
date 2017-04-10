@@ -103,15 +103,30 @@ get_header(); ?>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.349470115585!2d-79.35678208442066!3d43.64089697912185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb1edc1adaeb%3A0x7f0cc8bf3c3be45e!2s11+Polson+St%2C+Toronto%2C+ON+M5A+1A4!5e0!3m2!1sen!2sca!4v1491793278417" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="content-container">
+                    <p>Ontario, Canada</p>
+                    <p>11 Polson St</p>
+                    <p>778-898-8165</p>
                 </div>
             </div>
-
-
-
-
-
-
-		</main><!-- #main -->
+        </section>
+        <section class="gallery-section">
+            <h3 class="section-header">Gallery</h3>
+            <ul class="gallery-list">
+            <?php 
+                $loop = new WP_query(array('post_type' => 'gallery_post_type', 'posts_per_page' => 4, 'orderby' => 'date')); 
+            ?>
+            <?php 
+                while ( $loop -> have_posts() ) : $loop -> the_post(); 
+            ?>
+                <li class="gallery-image-container">
+                    <?php the_post_thumbnail('full'); ?>
+                <li>
+            <?php 
+                endwhile; 
+            ?>
+            </ul>
+        </section>
+        </main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

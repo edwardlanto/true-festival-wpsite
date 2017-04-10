@@ -427,27 +427,41 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     text-shadow: 5px 12px 25px #000000; } }
 
 .home .venue-section {
-  background-color: #fff;
+  background-color: white;
   height: 700px; }
 
-.home .map {
+.home .map iframe {
+  max-width: none; }
+
+.home .location-marker-container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  margin: 2rem; }
+
+.home .map-content-container {
+  padding: 0 2rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  padding: 0 3rem; }
-  .home .map iframe {
-    max-width: none; }
+      justify-content: center; }
+  .home .map-content-container h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'raleway';
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: black; }
+  .home .map-content-container .fa-map-marker {
+    font-size: 5rem;
+    color: black; }
 
-.home .map-content-container h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'raleway'; }
-
-.home .map-content-container .fa-map-marker {
-  font-size: 5rem; }
+.home .gallery-list {
+  padding: 0;
+  margin: 0; }
 
 html {
   font-family: sans-serif;
