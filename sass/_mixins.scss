@@ -17,8 +17,9 @@
 	background-color:red;
 }
 
-@mixin desktop {
-@media (min-width: $desktop_breakpoint) {
-	@content;
-}
-}
+$desktop-width: 1000px;
+    @mixin desktop{
+        @media (min-width: $desktop-width){
+            @content;
+        }
+    }

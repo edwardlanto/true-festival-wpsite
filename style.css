@@ -46,7 +46,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .main-navigation {
   width: 100%;
   height: 70px;
-  background-color: #F5EA9B;
   position: fixed;
   top: 0;
   margin-top: 35px;
@@ -57,7 +56,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home #primary-menu {
   display: none; }
-  @media (min-width: 720px) {
+  @media (min-width: 1000px) {
     .home #primary-menu {
       display: inline-block;
       font-size: 1.5rem;
@@ -69,7 +68,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       -ms-grid-row-align: center;
       align-self: center;
   position: relative;
-  top: 50%; }
+  top: 25%; }
   .home .menu-menu-1-container a {
     font-family: 'montserratmedium';
     text-shadow: 2px 2px 14px #000;
@@ -84,7 +83,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   -ms-flex-pack: center;
       justify-content: center;
   position: relative; }
-  @media (min-width: 720px) {
+  @media (min-width: 1000px) {
     .home .hero-container {
       height: 100vh; } }
 
@@ -177,6 +176,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   padding: 30px 15px 0 15px;
   background-color: black;
   padding-bottom: 5rem; }
+  @media (min-width: 1000px) {
+    .home .news-post-wrapper {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      padding: 0 2rem; } }
 
 .home .news-post-container {
   position: relative;
@@ -185,6 +191,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   padding-top: 1rem;
   border-top: 5px solid rgba(245, 234, 155, 0.31);
   border-radius: 5px; }
+  @media (min-width: 1000px) {
+    .home .news-post-container {
+      width: 47vw; } }
   .home .news-post-container img {
     width: 120px; }
 
@@ -193,6 +202,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   left: 70%;
   font-size: 1.5rem;
   bottom: 16rem; }
+  @media (min-width: 1000px) {
+    .home .news-title {
+      left: 19rem;
+      bottom: 26rem;
+      font-size: 2.5rem; } }
   .home .news-title a {
     color: white;
     text-decoration: none;
@@ -204,6 +218,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   max-height: 200px;
   position: relative;
   transition: all 0.5s linear; }
+  @media (min-width: 1000px) {
+    .home .front-news-image-container {
+      max-height: 350px; } }
   .home .front-news-image-container img {
     width: 100%;
     height: 100%;
@@ -238,11 +255,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
+  @media (min-width: 1000px) {
+    .home .news-excerpt-container {
+      -ms-flex-direction: column;
+          flex-direction: column; } }
   .home .news-excerpt-container p {
     color: white;
     font-size: 14px;
     font-family: 'montserrat';
     max-width: 288px; }
+    @media (min-width: 1000px) {
+      .home .news-excerpt-container p {
+        font-size: 1.2rem;
+        max-width: 100%; } }
 
 .home .read-more-news {
   -ms-flex-item-align: end;
@@ -286,11 +311,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border-top: 9px solid rgba(245, 234, 155, 0.76);
   padding-top: 2rem;
   border-radius: 5%; }
+  @media (min-width: 1000px) {
+    .home .news-post-container:first-child {
+      border-radius: 5px;
+      padding-top: 1rem;
+      border-top: 5px solid rgba(245, 234, 153, 0.31); } }
 
 .home .news-post-container:last-child {
   border-bottom: 9px solid rgba(245, 234, 155, 0.76);
   margin-top: 2rem;
   border-radius: 5%; }
+  @media (min-width: 1000px) {
+    .home .news-post-container:last-child {
+      margin-top: auto;
+      border-radius: 5px;
+      border-top: 5px solid rgba(245, 234, 155, 0.31);
+      border-bottom: none; } }
 
 .home .fadein {
   opacity: 0; }
@@ -390,10 +426,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     opacity: .6;
     box-shadow: none;
     width: 40px; }
-  .home .main-carousel .previous {
-    left: 5%; }
-  .home .main-carousel .next {
-    right: 5%; }
+  @media (min-width: 1000px) {
+    .home .main-carousel .previous {
+      left: 5%;
+      top: 34rem;
+      height: 75px;
+      box-shadow: none;
+      width: 225px;
+      border-radius: 5px;
+      box-shadow: -2px 0px 51px #f5ea9b;
+      background-color: white; } }
+  @media (min-width: 1000px) {
+    .home .main-carousel .next {
+      right: 5%;
+      top: 34rem;
+      height: 75px;
+      box-shadow: none;
+      width: 225px;
+      border-radius: 5px;
+      box-shadow: -2px 0px 51px #f5ea9b;
+      background-color: white; } }
 
 .home .carousel-cell.is-selected {
   display: -ms-flexbox;
@@ -455,6 +507,23 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   to {
     transform: rotateX(360deg);
     text-shadow: 5px 12px 25px #000000; } }
+
+.home .artist-list-item:first-child {
+  left: 59%; }
+
+.home .artist-content-container {
+  display: none; }
+  @media (min-width: 1000px) {
+    .home .artist-content-container {
+      display: inline-block; } }
+  .home .artist-content-container p {
+    position: relative;
+    color: white;
+    width: 60vw;
+    max-width: 924px;
+    line-height: 2rem;
+    font-size: 2rem;
+    margin-left: 28px; }
 
 .home .venue-section {
   background-color: white;

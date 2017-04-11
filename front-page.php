@@ -11,14 +11,14 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 	    <main id="main" class="site-main" role="main">
-        <!--<div class="folding-cube-container">
+        <div class="folding-cube-container">
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
                 <div class="sk-cube4 sk-cube"></div>
                 <div class="sk-cube3 sk-cube"></div>
             </div>
-        </div>-->
+        </div>
             <div class="hero-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero-image.jpg" class="home-hero">
                 <a href="https://www.eventbrite.ca/e/true-north-music-festival-tickets-32441901601" class="general-button hero-button">Buy Tickets</a>
@@ -43,7 +43,7 @@ get_header(); ?>
             </div>
             <div class="news-post-wrapper fadein">
                 <?php
-                $args = array( 'numberposts' =>3, 'order' => 'DESC', 'orderby' => 'date');
+                $args = array( 'numberposts' => 4, 'order' => 'DESC', 'orderby' => 'date');
                 $myposts = get_posts( $args );
                 foreach( $myposts as $post):
                 setup_postdata($post);?>
@@ -86,6 +86,9 @@ get_header(); ?>
                             <?php the_post_thumbnail('full'); ?>
                         </div>
                     </a>
+                    <div class="artist-content-container">
+                        <p><?php echo the_content() ?></p>
+                    </div>
                 <li>
                 <?php 
                     endwhile; 

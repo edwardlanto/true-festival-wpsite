@@ -29,17 +29,18 @@
 
     //Header Transparency
 
-    // $(window).scroll(function(){
-    //     event.preventDefault();
-    //     var y = $(window).scrollTop();
-    //     if( y > 400 ){
-    //         $('.main-navigation').css({"background-color" : "transparent", "box-shadow": "none"})
-    //     }else{
-    //         $('.main-navigation').css({"background-color" : "#f5ea9b", "box-shadow": "-9px 12px 69px 18px #fff"})
-    //         $('.nav-header').css({"color" : "white", "text-shadow" : "none"})
+    $(window).scroll(function(){
+        event.preventDefault();
+        var y = $(window).scrollTop();
+        if( y > 400 ){
+            $('.main-navigation').css({"background-color" : "rgba(245, 234, 155, 0.5)", "box-shadow": "none"});
+            $('.nav-header').css({"color" : "white", "text-shadow" : "none"});
+        }else{
+            $('.main-navigation').css({"background-color" : "#f5ea9b", "box-shadow": "-9px 12px 69px 18px #fff"});
+            $('.nav-header').css({"color" : "black", "text-shadow" : "4px 3px #fff"})
 
-    //     }
-    // })
+        }
+    })
 
 
 
