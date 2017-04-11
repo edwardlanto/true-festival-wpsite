@@ -11,14 +11,14 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 	    <main id="main" class="site-main" role="main">
-        <div class="folding-cube-container">
+        <!--<div class="folding-cube-container">
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
                 <div class="sk-cube4 sk-cube"></div>
                 <div class="sk-cube3 sk-cube"></div>
             </div>
-        </div>
+        </div>-->
             <div class="hero-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero-image.jpg" class="home-hero">
                 <a href="https://www.eventbrite.ca/e/true-north-music-festival-tickets-32441901601" class="general-button hero-button">Buy Tickets</a>
@@ -111,6 +111,7 @@ get_header(); ?>
         </section>
         <section class="gallery-section">
             <h3 class="section-header">Gallery</h3>
+                            <a href ="<?php echo get_post_type_archive_link('gallery_post_type')?>" class="gallery-link">See All Photos</a>
             <ul class="gallery-list">
             <?php 
                 $loop = new WP_query(array('post_type' => 'gallery_post_type', 'posts_per_page' => 4, 'orderby' => 'date')); 
@@ -118,7 +119,7 @@ get_header(); ?>
             <?php 
                 while ( $loop -> have_posts() ) : $loop -> the_post(); 
             ?>
-                <li class="gallery-image-container fadein">
+                <li class="gallery-image-container">
                     <?php the_post_thumbnail('full'); ?>
                 <li>
             <?php 

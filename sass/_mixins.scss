@@ -16,3 +16,9 @@
 	height:60px;
 	background-color:red;
 }
+
+@mixin desktop {
+@media (min-width: $desktop_breakpoint) {
+	@content;
+}
+}
