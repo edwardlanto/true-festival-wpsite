@@ -43,6 +43,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+@media (min-width: 1000px) {
+  .home .content-area {
+    padding: 0 1rem;
+    background-color: #000; } }
+
 .home .main-navigation {
   width: 100%;
   height: 70px;
@@ -66,6 +71,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       text-transform: uppercase;
       font-family: 'raleway'; } }
 
+.home #responsive-menu-container {
+  top: 45px; }
+
 .home .menu-menu-1-container {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -85,7 +93,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  position: relative; }
+  position: relative;
+  z-index: 10; }
   @media (min-width: 1000px) {
     .home .hero-container {
       height: 100vh; } }
@@ -97,7 +106,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     opacity: 1; } }
 
 .home .home-hero {
-  margin-top: 70px;
   object-fit: cover;
   z-index: -1;
   max-width: 100%; }
@@ -196,7 +204,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border-radius: 5px; }
   @media (min-width: 1000px) {
     .home .news-post-container {
-      width: 47vw; } }
+      width: 46vw; } }
   .home .news-post-container img {
     width: 120px; }
 
@@ -266,7 +274,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: white;
     font-size: 14px;
     font-family: 'montserrat';
-    max-width: 288px; }
+    max-width: 80vw; }
     @media (min-width: 1000px) {
       .home .news-excerpt-container p {
         font-size: 1.2rem;
@@ -431,7 +439,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   transition: all 0.3s ease-out; }
 
 .home .artist-section {
-  height: 700px;
+  height: 750px;
   padding: 3rem 0;
   background: url("../../images/black-background-design.jpg");
   background-size: cover; }
@@ -445,21 +453,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     border-radius: 50%;
     opacity: .6;
     box-shadow: none;
-    width: 40px; }
+    width: 40px;
+    transition: opacity 0.2s ease-in; }
+    .home .main-carousel button:hover {
+      opacity: 1; }
   @media (min-width: 1000px) {
     .home .main-carousel .previous {
-      left: 5%;
-      top: 34rem;
-      height: 75px;
-      box-shadow: none;
-      width: 225px;
-      border-radius: 5px;
-      box-shadow: -2px 0px 51px #f5ea9b;
-      background-color: white; } }
+      left: 5%; } }
   @media (min-width: 1000px) {
     .home .main-carousel .next {
-      right: 5%;
-      top: 34rem;
+      right: 5%; } }
+  @media (min-width: 1000px) {
+    .home .main-carousel .next, .home .main-carousel .previous {
+      top: 37rem;
       height: 75px;
       box-shadow: none;
       width: 225px;
@@ -474,6 +480,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       justify-content: center;
   -ms-flex-align: center;
       align-items: center; }
+  @media (min-width: 1000px) {
+    .home .carousel-cell.is-selected {
+      bottom: -30px;
+      margin-left: 4rem; } }
 
 .home .artist-list-item {
   position: relative;
@@ -509,8 +519,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .artist-image-container {
   background: none;
   border-radius: 50%;
-  transition: background 0.5s linear;
-  margin-top: 30px; }
+  transition: background 0.5s linear; }
   .home .artist-image-container:hover {
     background: rgba(226, 226, 226, 0.3); }
 
@@ -611,7 +620,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
           flex-wrap: wrap; } }
 
 .home .gallery-image-container {
-  max-height: 260px;
+  max-height: 57vw;
   width: 100%;
   border-bottom: 3px solid rgba(18, 14, 26, 0.4); }
   @media (min-width: 1000px) {
@@ -643,7 +652,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-family: 'montserratmedium';
   top: 71px;
   border-radius: 5px;
-  transition: all 0.5s linear;
+  transition: all 0.6s linear;
   border: 1px solid #f5ea9b;
   padding: 13px 56px;
   z-index: 100; }
@@ -659,27 +668,23 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   transition: none; }
 
 .home .gallery-link:hover:after {
-  width: 100%;
+  width: 120%;
   background-color: rgba(255, 255, 255, 0);
   transition: all 0.3s ease-out; }
 
 @media (min-width: 1000px) {
-  .home .gallery-list li:first-child {
-    width: 100vw; } }
+  .home .gallery-list li {
+    width: 49vw; } }
 
 @media (min-width: 1000px) {
-  .home .gallery-list li:nth-child(2), .home .gallery-list li:nth-child(3) {
-    max-width: 50vw; } }
-
-@media (min-width: 1000px) {
-  .home .gallery-image-container:nth-child(2) {
+  .home .gallery-list li:first-child, .home .gallery-list li:nth-child(3) {
     border-right: 4px solid #f5ea9b; } }
 
 @media (min-width: 1000px) {
   .home .gallery-image-container img {
     filter: grayscale(100%);
     opacity: 0.7;
-    transition: all 0.3s linear; }
+    transition: all 0.2s linear; }
     .home .gallery-image-container img:hover {
       filter: grayscale(0%);
       opacity: 1; } }

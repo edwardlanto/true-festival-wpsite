@@ -95,7 +95,7 @@ get_header(); ?>
                 ?>
             </ul>
         </section>
-        <section class="venue-section">
+        <section class="venue-section fadein">
             <h3 class="section-header">Venue</h3>
             <div class="map-content-container">
                 <div class="location-marker-container">
@@ -112,7 +112,7 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-        <section class="gallery-section">
+        <section class="gallery-section fadein">
             <h3 class="section-header">Gallery</h3>
             <span class="gallery-link-container">
                 <a href ="<?php echo get_post_type_archive_link('gallery_post_type')?>" class="gallery-link">See All Photos</a>
