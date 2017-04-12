@@ -70,7 +70,7 @@ get_header(); ?>
         </div>
         <section class="artist-section">
             <div class="archive-header-container">
-                <a href="<?php echo get_post_type_archive_link('artist_post_type'); ?>">Full Lineup</a>
+                <a href="<?php echo get_post_type_archive_link('artist_post_type'); ?>" class="artist-button"><span class="artist-button-span">Full Lineup</span></a>
             </div>
             <ul class="main-carousel">
                 <?php 
@@ -89,7 +89,7 @@ get_header(); ?>
                     <div class="artist-content-container">
                         <p><?php echo the_content() ?></p>
                     </div>
-                <li>
+                </li>
                 <?php 
                     endwhile; 
                 ?>
@@ -114,7 +114,9 @@ get_header(); ?>
         </section>
         <section class="gallery-section">
             <h3 class="section-header">Gallery</h3>
-                            <a href ="<?php echo get_post_type_archive_link('gallery_post_type')?>" class="gallery-link">See All Photos</a>
+            <span class="gallery-link-container">
+                <a href ="<?php echo get_post_type_archive_link('gallery_post_type')?>" class="gallery-link">See All Photos</a>
+            </span>
             <ul class="gallery-list">
             <?php 
                 $loop = new WP_query(array('post_type' => 'gallery_post_type', 'posts_per_page' => 4, 'orderby' => 'date')); 
@@ -124,7 +126,7 @@ get_header(); ?>
             ?>
                 <li class="gallery-image-container">
                     <?php the_post_thumbnail('full'); ?>
-                <li>
+                </li>
             <?php 
                 endwhile; 
             ?>

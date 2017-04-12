@@ -32,7 +32,7 @@
     $(window).scroll(function(){
         event.preventDefault();
         var y = $(window).scrollTop();
-        if( y > 400 ){
+        if( y > 600 ){
             $('.main-navigation').css({"background-color" : "rgba(245, 234, 155, 0.5)", "box-shadow": "none"});
             $('.nav-header').css({"color" : "white", "text-shadow" : "none"});
         }else{
@@ -41,7 +41,6 @@
 
         }
     })
-
 
 
 })(jQuery)

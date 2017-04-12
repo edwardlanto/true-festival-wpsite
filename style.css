@@ -54,6 +54,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   -ms-flex-direction: column;
       flex-direction: column; }
 
+.home .site-main {
+  position: relative; }
+
 .home #primary-menu {
   display: none; }
   @media (min-width: 1000px) {
@@ -102,7 +105,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .social-icons-container {
   height: 80px;
   width: 100%;
-  background-color: #F5EA9B;
+  background-color: #f5ea9b;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -217,7 +220,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .front-news-image-container {
   max-height: 200px;
   position: relative;
-  transition: all 0.5s linear; }
+  transition: all 0.2s linear; }
   @media (min-width: 1000px) {
     .home .front-news-image-container {
       max-height: 350px; } }
@@ -402,13 +405,30 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: flex;
   -ms-flex-pack: center;
       justify-content: center; }
-  .home .archive-header-container a {
-    padding: 10px 30px;
-    background-color: #f5ea9b;
-    font-family: 'montserratmedium';
+  .home .archive-header-container .artist-button {
+    padding: 13px 56px;
+    font-family: montserratmedium;
     text-decoration: none;
     text-transform: uppercase;
-    border-radius: 15px; }
+    border-radius: 15px;
+    border: 1px solid #f5ea9b;
+    color: #f5ea9b;
+    position: relative; }
+
+.home .artist-button:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: none; }
+
+.home .artist-button:hover:after {
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-out; }
 
 .home .artist-section {
   height: 700px;
@@ -448,8 +468,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       background-color: white; } }
 
 .home .carousel-cell.is-selected {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
@@ -475,7 +495,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     text-transform: uppercase;
     text-shadow: 5px 12px 25px #000000;
     font-size: 3rem;
-    color: #F5EA9B;
+    color: #f5ea9b;
     max-width: 20rem;
     font-family: 'montserratbold'; }
   .home .artist-list-item a {
@@ -500,6 +520,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   animation-timing-function: linear;
   animation-delay: 0.2s; }
 
+.home .carousel-cell {
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
 @keyframes header-move {
   from {
     transform: rotateX(0deg);
@@ -510,6 +534,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .artist-list-item:first-child {
   left: 59%; }
+
+@media (min-width: 1000px) {
+  .home .flickity-page-dots {
+    display: none; } }
 
 .home .artist-content-container {
   display: none; }
@@ -523,10 +551,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     max-width: 924px;
     line-height: 2rem;
     font-size: 2rem;
-    margin-left: 28px; }
+    margin-left: 28px;
+    display: inline-block;
+    box-sizing: border-box; }
 
 .home .venue-section {
-  background-color: white;
+  background: url("../../images/rave-background.jpg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
+  background-size: cover,cover;
   height: 700px; }
 
 .home .map iframe {
@@ -555,54 +586,103 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     font-family: 'raleway';
     margin-left: 2rem;
     font-size: 2rem;
-    color: black; }
+    color: white;
+    letter-spacing: 3px; }
   .home .map-content-container .fa-map-marker {
     font-size: 5rem;
-    color: black; }
+    color: white; }
 
 .home .content-container {
   transform: translateX(-8rem); }
 
-.home .gallery-section {
+.home .gallery-list {
+  padding: 0;
+  margin: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
-  position: relative; }
-
-.home .gallery-list {
-  padding: 0;
-  margin: 0; }
+  transform: translateY(-50px); }
+  @media (min-width: 1000px) {
+    .home .gallery-list {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
 
 .home .gallery-image-container {
-  max-height: 300px;
+  max-height: 260px;
   width: 100%;
   border-bottom: 3px solid rgba(18, 14, 26, 0.4); }
+  @media (min-width: 1000px) {
+    .home .gallery-image-container {
+      max-height: 500px;
+      border-bottom: 4px solid #f5ea9b; } }
   .home .gallery-image-container img {
     height: 100%;
     width: 100%; }
+    @media (min-width: 1000px) {
+      .home .gallery-image-container img {
+        object-fit: cover; } }
+
+.home .gallery-link-container {
+  width: 100%;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .home .gallery-link {
-  padding: .5rem 1rem;
-  background-color: #fff;
-  position: absolute;
+  position: relative;
   text-align: center;
-  width: 250px;
-  color: #000;
+  width: 260px;
+  color: #f5ea9b;
   text-decoration: none;
   text-transform: uppercase;
   box-shadow: -3px 19px 37px #1f2652;
   font-family: 'montserratmedium';
   top: 71px;
-  border-radius: 10px;
-  transition: all 0.5s linear; }
-  .home .gallery-link:hover {
-    background-color: #e10684;
-    color: black;
-    font-size: 18px;
-    letter-spacing: 1px; }
+  border-radius: 5px;
+  transition: all 0.5s linear;
+  border: 1px solid #f5ea9b;
+  padding: 13px 56px;
+  z-index: 100; }
+
+.home .gallery-link:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: #f5ea9b;
+  transition: none; }
+
+.home .gallery-link:hover:after {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-out; }
+
+@media (min-width: 1000px) {
+  .home .gallery-list li:first-child {
+    width: 100vw; } }
+
+@media (min-width: 1000px) {
+  .home .gallery-list li:nth-child(2), .home .gallery-list li:nth-child(3) {
+    max-width: 50vw; } }
+
+@media (min-width: 1000px) {
+  .home .gallery-image-container:nth-child(2) {
+    border-right: 4px solid #f5ea9b; } }
+
+@media (min-width: 1000px) {
+  .home .gallery-image-container img {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s linear; }
+    .home .gallery-image-container img:hover {
+      filter: grayscale(0%);
+      opacity: 1; } }
 
 html {
   font-family: sans-serif;

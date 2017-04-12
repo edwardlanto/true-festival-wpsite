@@ -11,6 +11,10 @@
  		flex-direction: column;
     }
 
+	.site-main{
+		position:relative;
+	}
+
 	#primary-menu{
 		display:none;
 			@include desktop{
@@ -63,7 +67,7 @@
 	.social-icons-container{
     	height:80px;
     	width:100%;
-    	background-color:#F5EA9B;
+    	background-color:$main__yellow;
     	display:flex;
     	justify-content:center;
     	align-items:center;
@@ -105,8 +109,6 @@
 				color:white;
 				background-color:#E10684;
 				border-radius:12px;
-				// box-shadow:0px 5px 5px 10px #f4f4f2;
-				
 			}
 		}
 
@@ -181,7 +183,7 @@
 	.front-news-image-container{
     	max-height: 200px;
 		position:relative;
-		transition:all 0.5s linear;
+		transition:all 0.2s linear;
 			@include desktop{
 				max-height:350px;
 			}
@@ -242,7 +244,7 @@
 	.read-more-news{
 		align-self:flex-end;
 		text-decoration:none;
-		background-color:#f5ea9b;
+		background-color:$main__yellow;
 		width:200px;
 		height:50px;
 		text-transform:uppercase;
@@ -418,15 +420,41 @@
 		width:100%;
     	display: flex;
     	justify-content: center;
-			a{
-				padding: 10px 30px;
-				background-color: #f5ea9b;
-				font-family: 'montserratmedium';
+			.artist-button{
+				padding: 13px 56px;
+				font-family: montserratmedium;
 				text-decoration: none;
 				text-transform: uppercase;
 				border-radius: 15px;
+				border: 1px solid $main__yellow;
+				color: $main__yellow;
+				position:relative;
 			}
 	}
+
+	.artist-button:after {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 0%;
+		height: 100%;
+		background-color: rgba(255,255,255,0.4);
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		transition: none;
+    }
+
+	.artist-button:hover:after {
+		width: 120%;
+		background-color: rgba(255,255,255,0);
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+
 
 	.artist-section{
 		height:700px;
@@ -454,7 +482,7 @@
     			box-shadow: none;
     			width: 225px;
     			border-radius: 5px;
-    			box-shadow: -2px 0px 51px #f5ea9b;
+    			box-shadow: -2px 0px 51px $main__yellow;
 				background-color:white;
 			}
 		}
@@ -466,15 +494,14 @@
     			box-shadow: none;
     			width: 225px;
     			border-radius: 5px;
-    			box-shadow: -2px 0px 51px #f5ea9b;
+    			box-shadow: -2px 0px 51px $main__yellow;
 				background-color:white;
 			}
-	
 		}
 	}
 
 	.carousel-cell.is-selected{
-		display: flex;
+		display: inline-flex;
     	justify-content: center;
     	align-items: center;
 	}
@@ -500,7 +527,7 @@
 			text-transform:uppercase;
 			text-shadow: 5px 12px 25px #000000;
 			font-size:3rem;
-			color:#F5EA9B;
+			color:$main__yellow;
 			max-width:20rem;
 			font-family:'montserratbold';
 		}
@@ -510,6 +537,8 @@
     		align-items: center;
 		}
 	}
+
+
 
 	.artist-image-container{
 		background:none;
@@ -530,6 +559,10 @@
 		}
 	}
 
+	.carousel-cell{
+		display:inline-flex;
+	}
+
 	@keyframes header-move{
 		from{
 			transform:rotateX(0deg);
@@ -545,12 +578,11 @@
 		left: 59%;
 	}
 
-	// .carousel-cell.is-selected{
-	// 	@include desktop{
-	// 		width:50vw;
-	// 	}
-	// }
-
+	.flickity-page-dots{
+		@include desktop{
+			display:none;
+		}
+	}
 	.artist-content-container{
 		display:none;
 			@include desktop{
@@ -564,13 +596,17 @@
     		line-height: 2rem;
     		font-size: 2rem;
     		margin-left: 28px;
+			display:inline-block;
+			box-sizing:border-box;
 		}
 	}
 
 	//Venue Section
 
 	.venue-section{
-		background-color:white;
+		background:url('../../images/rave-background.jpg')
+		,linear-gradient( to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% );
+		background-size:cover,cover;
 		height:700px;
 	}
 
@@ -598,11 +634,12 @@
 			font-family:'raleway';
 			margin-left:2rem;
 			font-size:2rem;
-			color:black;
+			color:white;
+			letter-spacing:3px;
 		}
 		.fa-map-marker{
 			font-size:5rem;
-			color:black;
+			color:white;
 		}
 	}
 
@@ -612,49 +649,111 @@
 
 	//Gallery Section
 
-	.gallery-section{
-		display: flex;
-    	flex-direction: column;
-    	align-items: center;
-		position:relative;
-	}
-
 	.gallery-list{
 		padding:0;
 		margin:0;
+		display:flex;
+		flex-direction:column;
+		transform: translateY(-50px);
+			@include desktop{
+				flex-direction:row;
+    			flex-wrap: wrap;
+			}
 	}
 
 	.gallery-image-container{
-		max-height:300px;
+		max-height:260px;
 		width:100%;
 		border-bottom: 3px solid rgba(18, 14, 26, 0.4);
-		img{
-			height:100%;
-			width:100%;
-		}
+			@include desktop{
+				max-height:500px;
+				border-bottom:4px solid $main__yellow;
+
+			}
+			img{
+				height:100%;
+				width:100%;
+					@include desktop{
+						object-fit:cover;
+					}
+			}
+	}
+
+	.gallery-link-container{
+		width: 100%;
+    	display: inline-flex;
+    	justify-content: center;
 	}
 
 	.gallery-link{
-		padding: .5rem 1rem;
-    	background-color: #fff;
-    	position: absolute;
+    	position: relative;
     	text-align: center;
-    	width: 250px;
-    	color: #000;
+    	width: 260px;
+    	color: $main__yellow;
     	text-decoration: none;
     	text-transform: uppercase;
     	box-shadow: -3px 19px 37px #1f2652;
     	font-family: 'montserratmedium';
     	top: 71px;
-    	border-radius: 10px;
+    	border-radius: 5px;
 		transition:all 0.5s linear;
-			&:hover{
-				background-color:#e10684;
-				color:black;
-				font-size:18px;
-				letter-spacing:1px;
+		border:1px solid $main__yellow;
+		padding: 13px 56px;
+		z-index:100;
+	}
+
+	.gallery-link:after {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 0%;
+		height: 100%;
+		background-color: $main__yellow;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		transition: none;
+    }
+
+	.gallery-link:hover:after {
+		width: 100%;
+		background-color: rgba(255,255,255,0);
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-ms-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+
+	.gallery-list li:first-child{
+		@include desktop{
+			width:100vw;
+		}
+	}
+
+	.gallery-list li:nth-child(2), .gallery-list li:nth-child(3){
+		@include desktop{
+			max-width:50vw;
+		}
+	}
+
+	.gallery-image-container:nth-child(2){
+		@include desktop{
+			border-right:4px solid $main__yellow;
+		}
+	}
+
+	.gallery-image-container img{
+			@include desktop{
+				filter:grayscale(100%);
+				opacity:0.7;
+				transition:all 0.3s linear;
+					&:hover{
+						filter:grayscale(0%);
+						opacity:1;
+					}
 			}
 	}
-	
+
 
 }//Home Wraper
