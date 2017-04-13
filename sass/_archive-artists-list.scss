@@ -27,9 +27,34 @@
     }
     
     .black-background{
-        background:url('../../images/cube-background.jpg')center no-repeat;
+        background:url('../../images/cube-background.jpg')center top;
         background-size:cover;
         
+    }
+
+    .artist-list-item{
+        padding: 1rem 0;
+        img{
+            filter: grayscale(0%) contrast(100%);
+            border:9px solid #fff;
+        }
+        h3{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            text-shadow: 5px 12px 25px #000;
+            font-size: 2rem;
+            color: #f5ea9b;
+            max-width: 20rem;
+            font-family: montserratbold;
+            z-index: 10;
+            bottom: 6rem;
+        }
+    }
+
+    .main-navigation{
+        background-color: rgb(245, 234, 155);
     }
 
 

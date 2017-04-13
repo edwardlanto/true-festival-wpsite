@@ -85,7 +85,13 @@ get_header(); ?>
                         <div class="artist-image-container">
                             <h3 class="artist-header"><?php the_title(); ?></h3>
                             <?php the_post_thumbnail('full'); ?>
-                            <div class="artist-social"></div>
+                            <div class="artist-social">
+                            </div>
+                            <div class="artist-icon-container">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </div>
                         </div><!--artist-image-container-->
                     </a>
                     <div class="artist-content-container">

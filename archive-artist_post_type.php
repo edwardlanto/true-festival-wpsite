@@ -15,7 +15,7 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 				<div class="artist-section-header">
-					<h1>Main</h1>
+					<h1 class="section-header">Main Stage</h1>
 				</div>
 				<section class="main-artists-wrapper">
 					<ul class="main-artists-list">
@@ -40,7 +40,7 @@ get_header(); ?>
 					</ul>
 				</section>
 				<div class="artist-section-header">
-					<h1 class="section-header">Fusion</h1>
+					<h1 class="section-header">Fusion Stage</h1>
 				</div>
 				<section class="secondary-artists-wrapper">
 					<ul class="main-artists-list">

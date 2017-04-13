@@ -51,7 +51,9 @@
         if(WideWindow.width() >= 830){
             $('.gallery-image-container').addClass('popup');
         }else{
-           $('.gallery-image-container').removeClass('popup');
+            $('.gallery-image-container').removeClass('popup');
+            $('.artist-social').remove();
+            $('.artist-icon-container').remove();
         }
     }
 
