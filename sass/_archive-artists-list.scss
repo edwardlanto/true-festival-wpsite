@@ -1,0 +1,36 @@
+.post-type-archive-artist_post_type{
+
+    .main-artists-list{
+        padding:0;
+        margin:0;
+    }
+
+    .artist-list-item{
+        justify-content: center;
+        align-items: center;
+        display:flex;
+        z-index:2;
+        padding-bottom:3rem;
+            img{
+                box-shadow: 0px 0px 5rem rgb(130, 128, 128);
+            }
+    }
+
+    .artist-section-header{
+        width:100vw;
+        display:flex;
+        justify-content:center;
+    }
+
+    .main-artists-wrapper{
+        // margin:0 1rem;
+    }
+    
+    .black-background{
+        background:url('../../images/cube-background.jpg')center no-repeat;
+        background-size:cover;
+        
+    }
+
+
+}//post-type-wrapper

@@ -80,7 +80,7 @@ get_header(); ?>
                     while ( $loop -> have_posts() ) : $loop -> the_post(); 
                 ?>
                 <li class="carousel-cell artist-list-item">
-                    <a href="<?php the_permalink() ?>">
+                    <a href="<?php echo CFS()->get('artist_link');?>">
                         <h3 class="artist-header"><?php the_title(); ?></h3>
                         <div class="artist-image-container">
                             <?php the_post_thumbnail('full'); ?>
@@ -103,7 +103,7 @@ get_header(); ?>
                     <h2>Location</h2>
                 </div>
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.349470115585!2d-79.35678208442066!3d43.64089697912185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb1edc1adaeb%3A0x7f0cc8bf3c3be45e!2s11+Polson+St%2C+Toronto%2C+ON+M5A+1A4!5e0!3m2!1sen!2sca!4v1491793278417" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.349470115585!2d-79.35678208442066!3d43.64089697912185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb1edc1adaeb%3A0x7f0cc8bf3c3be45e!2s11+Polson+St%2C+Toronto%2C+ON+M5A+1A4!5e0!3m2!1sen!2sca!4v1491793278417" width="320" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="content-container">
                     <p>Ontario, Canada</p>
@@ -115,8 +115,9 @@ get_header(); ?>
         <section class="gallery-section fadein">
             <h3 class="section-header">Gallery</h3>
             <span class="gallery-link-container">
-                <a href ="<?php echo get_post_type_archive_link('gallery_post_type')?>" class="gallery-link">See All Photos</a>
+                <a href="<?php echo get_post_type_archive_link('gallery_post_type')?>" class="gallery-link">See All Photos</a>
             </span>
+            <div class="gallery-popup"></div>
             <ul class="gallery-list">
             <?php 
                 $loop = new WP_query(array('post_type' => 'gallery_post_type', 'posts_per_page' => 4, 'orderby' => 'date')); 

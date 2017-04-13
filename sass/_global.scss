@@ -1,0 +1,59 @@
+//Global
+
+.artist-image-container{
+		background:none;
+		border-radius:50%;
+		transition:background 0.5s linear;
+			&:hover{
+				background:rgba(226,226,226,0.3	);
+			}
+	}
+
+.artist-list-item{
+	position:relative;
+	width:100vw;
+	    img{
+			width: 100vw;
+    		border-radius: 50%;
+    		margin: 0 auto;
+    		height: 320px;
+    		width: 320px;;
+    		object-fit: cover;
+			position:relative;
+			z-index:-1;
+			border: 9px solid #908c6d;
+                @include desktop{
+                    width:500px;
+                    height:500px;
+                }
+		}
+		h3{
+			position:absolute;
+			text-align: center;
+			width:100%;
+			text-transform:uppercase;
+			text-shadow: 5px 12px 25px #000000;
+			font-size:3rem;
+			color:$main__yellow;
+			max-width:20rem;
+			font-family:'montserratbold';
+		}
+		a{
+			display: flex;
+    		justify-content: center;
+    		align-items: center;
+		}
+	}
+
+.section-header{
+	text-align:center;
+	text-transform:uppercase;
+	font-family:'raleway';
+	padding:10px 0;
+	font-size:2rem;
+	margin:0;
+	background-color:rgb(38, 47, 101);
+	color:white;
+	width: 100%;
+	letter-spacing:3px;
+}

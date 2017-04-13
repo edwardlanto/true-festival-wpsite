@@ -43,49 +43,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
-@media (min-width: 1000px) {
-  .home .content-area {
-    padding: 0 1rem;
-    background-color: #000; } }
-
-.home .main-navigation {
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  top: 0;
-  margin-top: 35px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column; }
-
-.home .site-main {
-  position: relative; }
-
-.home #primary-menu {
-  display: none; }
-  @media (min-width: 1000px) {
-    .home #primary-menu {
-      display: inline-block;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      font-family: 'raleway'; } }
-
-.home #responsive-menu-container {
-  top: 45px; }
-
-.home .menu-menu-1-container {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  position: relative;
-  top: 25%; }
-  .home .menu-menu-1-container a {
-    font-family: 'montserratmedium';
-    text-shadow: 2px 2px 14px #000;
-    color: #fff;
-    margin: 0 1rem; }
-
 .home .hero-container {
   height: 600px;
   width: 100vw;
@@ -160,22 +117,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: white;
     background-color: #E10684;
     border-radius: 12px; }
-
-.home .main-navigation {
-  box-shadow: -9px 12px 69px 18px #fff;
-  z-index: 20; }
-
-.home .section-header {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'raleway';
-  padding: 10px 0;
-  font-size: 2rem;
-  margin: 0;
-  background-color: #262f65;
-  color: white;
-  width: 100%;
-  letter-spacing: 3px; }
 
 .home .news-post-wrapper {
   display: -ms-flexbox;
@@ -412,7 +353,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  margin-bottom: 2rem; }
+  @media (min-width: 1000px) {
+    .home .archive-header-container {
+      margin-bottom: 0; } }
   .home .archive-header-container .artist-button {
     padding: 13px 56px;
     font-family: montserratmedium;
@@ -443,6 +388,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   padding: 3rem 0;
   background: url("../../images/black-background-design.jpg");
   background-size: cover; }
+  @media (min-width: 1000px) {
+    .home .artist-section {
+      height: 900px; } }
 
 .home .main-carousel {
   padding: 0;
@@ -465,7 +413,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       right: 5%; } }
   @media (min-width: 1000px) {
     .home .main-carousel .next, .home .main-carousel .previous {
-      top: 37rem;
+      top: 40rem;
       height: 75px;
       box-shadow: none;
       width: 225px;
@@ -485,51 +433,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       bottom: -30px;
       margin-left: 4rem; } }
 
-.home .artist-list-item {
-  position: relative;
-  width: 100vw; }
-  .home .artist-list-item img {
-    width: 100vw;
-    border-radius: 50%;
-    margin: 0 auto;
-    height: 60vh;
-    max-width: 500px;
-    object-fit: cover;
-    position: relative;
-    z-index: -1;
-    border: 9px solid #908c6d; }
-  .home .artist-list-item h3 {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    text-transform: uppercase;
-    text-shadow: 5px 12px 25px #000000;
-    font-size: 3rem;
-    color: #f5ea9b;
-    max-width: 20rem;
-    font-family: 'montserratbold'; }
-  .home .artist-list-item a {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center; }
-
-.home .artist-image-container {
-  background: none;
-  border-radius: 50%;
-  transition: background 0.5s linear; }
-  .home .artist-image-container:hover {
-    background: rgba(226, 226, 226, 0.3); }
-
 .home .carousel-cell.is-selected .artist-header {
   animation-name: header-move;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-delay: 0.2s; }
 
-.home .carousel-cell {
+.home .carousel-cell.artist-list-item {
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
@@ -562,7 +472,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     font-size: 2rem;
     margin-left: 28px;
     display: inline-block;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    right: 100px; }
+
+.home .carousel-cell.artist-list-item.is-selected .artist-content-container p {
+  margin-left: 9rem; }
 
 .home .venue-section {
   background: url("../../images/rave-background.jpg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%);
@@ -611,18 +525,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  transform: translateY(-50px); }
+  transform: translateY(-50px);
+  background-color: #000; }
   @media (min-width: 1000px) {
     .home .gallery-list {
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
+          flex-wrap: wrap;
+      -ms-flex-pack: center;
+          justify-content: center; } }
 
 .home .gallery-image-container {
   max-height: 57vw;
   width: 100%;
-  border-bottom: 3px solid rgba(18, 14, 26, 0.4); }
+  border-bottom: 3px solid white; }
   @media (min-width: 1000px) {
     .home .gallery-image-container {
       max-height: 500px;
@@ -674,7 +591,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @media (min-width: 1000px) {
   .home .gallery-list li {
-    width: 49vw; } }
+    width: 48vw; } }
 
 @media (min-width: 1000px) {
   .home .gallery-list li:first-child, .home .gallery-list li:nth-child(3) {
@@ -1127,6 +1044,87 @@ table {
 * {
   font-family: 'montserrat'; }
 
+.artist-image-container {
+  background: none;
+  border-radius: 50%;
+  transition: background 0.5s linear; }
+  .artist-image-container:hover {
+    background: rgba(226, 226, 226, 0.3); }
+
+.artist-list-item {
+  position: relative;
+  width: 100vw; }
+  .artist-list-item img {
+    width: 100vw;
+    border-radius: 50%;
+    margin: 0 auto;
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    border: 9px solid #908c6d; }
+    @media (min-width: 1000px) {
+      .artist-list-item img {
+        width: 500px;
+        height: 500px; } }
+  .artist-list-item h3 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    text-shadow: 5px 12px 25px #000000;
+    font-size: 3rem;
+    color: #f5ea9b;
+    max-width: 20rem;
+    font-family: 'montserratbold'; }
+  .artist-list-item a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+
+.section-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'raleway';
+  padding: 10px 0;
+  font-size: 2rem;
+  margin: 0;
+  background-color: #262f65;
+  color: white;
+  width: 100%;
+  letter-spacing: 3px; }
+
+.post-type-archive-artist_post_type .main-artists-list {
+  padding: 0;
+  margin: 0; }
+
+.post-type-archive-artist_post_type .artist-list-item {
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  padding-bottom: 3rem; }
+  .post-type-archive-artist_post_type .artist-list-item img {
+    box-shadow: 0px 0px 5rem #828080; }
+
+.post-type-archive-artist_post_type .artist-section-header {
+  width: 100vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.post-type-archive-artist_post_type .black-background {
+  background: url("../../images/cube-background.jpg") center no-repeat;
+  background-size: cover; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -1387,6 +1385,48 @@ a {
 
 .nav-header {
   font-size: 1.8rem; }
+
+.main-navigation {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  margin-top: 35px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.site-main {
+  position: relative; }
+
+#primary-menu {
+  display: none; }
+  @media (min-width: 1000px) {
+    #primary-menu {
+      display: inline-block;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-family: 'raleway'; } }
+
+#responsive-menu-container {
+  top: 45px; }
+
+.menu-menu-1-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  top: 25%; }
+  .menu-menu-1-container a {
+    font-family: 'montserratmedium';
+    text-shadow: 2px 2px 14px #000;
+    color: #fff;
+    margin: 0 1rem; }
+
+.main-navigation {
+  box-shadow: -9px 12px 69px 18px #fff;
+  z-index: 20; }
 
 /*--------------------------------------------------------------
 # Accessibility
