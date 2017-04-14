@@ -31,38 +31,57 @@ get_header(); ?>
 					?>
 					<div class="black-background">
 						<li class="artist-list-item">
-							<h3><?php the_title(); ?></h3>
-							<div><?php the_post_thumbnail('large'); ?></div>
+							<div class="flip-container">
+								<div class="flip-cards">
+									<div class="front-flip">
+										<h3><?php the_title(); ?></h3>
+										<div><?php the_post_thumbnail('large'); ?></div>
+									</div><!--front-flip-->
+									<div class="back-flip">
+										<div><?php the_post_thumbnail('large') ?></div>
+									</div><!--back-flip-->
+								</div><!--flip-cards-->
+							</div><!--flip-container-->
 						</li>
 					</div>
-						<?php endforeach; ?>
-						
-					</ul>
+					<?php endforeach; ?>
+				</ul>
 				</section>
 				<div class="artist-section-header">
 					<h1 class="section-header">Fusion Stage</h1>
 				</div>
-				<section class="secondary-artists-wrapper">
-					<ul class="main-artists-list">
-						<?php
-						$args  = array(
-						'posts_per_page'  => -1,
-						'category'        => 5,
-						'orderby'         => 'post_date',
-						'order'           => 'ASC',
-						'post_type'       => 'artist_post_type' );
-						$posts = get_posts($args);
-						foreach ($posts as $post) :
-						?>
-						<div class="black-background">
-							<li class = "artist-list-item">
-								<h3><?php the_title(); ?></h3>
-								<div><?php the_post_thumbnail('large'); ?></div>
-							</li>
-						</div>
-						<?php endforeach; ?>
-					</ul>
-				</section>
+				<section class="main-artists-wrapper">
+					<ul class="secondary-artists-list">
+					<?php
+					$args  = array(
+					'posts_per_page'  => -1,
+					'category'        => 5,
+					'orderby'         => 'post_date',
+					'order'           => 'ASC',
+					'post_type'       => 'artist_post_type' );
+					$posts = get_posts($args);
+					foreach ($posts as $post) :
+					?>
+					<div class="black-background">
+						<li class="artist-list-item">
+							<div class="flip-container">
+								<div class="flip-cards">
+									<div class="front-flip">
+										<h3><?php the_title(); ?></h3>
+										<div><?php the_post_thumbnail('large'); ?></div>
+									</div><!--front-flip-->
+									<div class="back-flip">
+										<div><?php the_post_thumbnail('large') ?></div>
+									</div><!--back-flip-->
+								</div><!--flip-cards-->
+							</div><!--flip-container-->
+						</li>
+					</div>
+					<?php endforeach; ?>
+				</ul>
+			</section>
+			<canvas id="starfield" width="100%" height="400px"></canvas>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

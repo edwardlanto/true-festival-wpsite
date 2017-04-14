@@ -82,7 +82,7 @@
 				@include desktop{
                     width:500px;
                     height:500px;
-					filter: grayscale(100%) contrast(60%);
+					filter: contrast(129%) invert(28%) saturate(1);
 					border:9px solid #fff;
 				
                 }

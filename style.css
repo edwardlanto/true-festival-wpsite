@@ -464,7 +464,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       display: inline-block; } }
   .home .artist-content-container p {
     position: relative;
-    color: #f9e660;
+    color: #ff1b9e;
     width: 60vw;
     max-width: 924px;
     line-height: 2rem;
@@ -472,7 +472,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     margin-left: 28px;
     display: inline-block;
     box-sizing: border-box;
-    right: 100px; }
+    right: 100px;
+    text-shadow: 0px 0px 28px white; }
 
 .home .carousel-cell.artist-list-item.is-selected .artist-content-container p {
   margin-left: 9rem; }
@@ -1133,7 +1134,7 @@ table {
       .artist-list-item img {
         width: 500px;
         height: 500px;
-        filter: grayscale(100%) contrast(60%);
+        filter: contrast(129%) invert(28%) saturate(1);
         border: 9px solid #fff; } }
   .artist-list-item h3 {
     position: absolute;
@@ -1167,9 +1168,18 @@ table {
   width: 100%;
   letter-spacing: 3px; }
 
-.post-type-archive-artist_post_type .main-artists-list {
+.post-type-archive-artist_post_type .main-artists-list, .post-type-archive-artist_post_type .secondary-artists-list {
   padding: 0;
   margin: 0; }
+  @media (min-width: 1000px) {
+    .post-type-archive-artist_post_type .main-artists-list, .post-type-archive-artist_post_type .secondary-artists-list {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      background: linear-gradient(180deg, rgba(245, 234, 155, 0.2) 0, rgba(245, 234, 155, 0.8)), url(../../images/black-background-design.jpg) no-repeat 50%; } }
 
 .post-type-archive-artist_post_type .artist-list-item {
   -ms-flex-pack: center;
@@ -1180,6 +1190,10 @@ table {
   display: flex;
   z-index: 2;
   padding-bottom: 3rem; }
+  @media (min-width: 1000px) {
+    .post-type-archive-artist_post_type .artist-list-item {
+      max-width: 500px;
+      padding-left: 1.5%; } }
   .post-type-archive-artist_post_type .artist-list-item img {
     box-shadow: 0px 0px 5rem #828080; }
 
@@ -1193,6 +1207,9 @@ table {
 .post-type-archive-artist_post_type .black-background {
   background: url("../../images/cube-background.jpg") center top;
   background-size: cover; }
+  @media (min-width: 1000px) {
+    .post-type-archive-artist_post_type .black-background {
+      background: none; } }
 
 .post-type-archive-artist_post_type .artist-list-item {
   padding: 1rem 0; }
@@ -1214,6 +1231,56 @@ table {
 
 .post-type-archive-artist_post_type .main-navigation {
   background-color: #f5ea9b; }
+
+.post-type-archive-artist_post_type .flip-container {
+  position: relative;
+  perspective: 500px; }
+
+.post-type-archive-artist_post_type .flip-cards {
+  width: 321px;
+  height: 320px;
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  border-radius: 50%; }
+  @media (min-width: 1000px) {
+    .post-type-archive-artist_post_type .flip-cards {
+      width: 500px;
+      height: 500px; } }
+
+.post-type-archive-artist_post_type .flip-cards:hover {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); }
+
+.post-type-archive-artist_post_type .flip-cards div {
+  width: 321px;
+  height: 320px;
+  position: absolute;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; }
+  @media (min-width: 1000px) {
+    .post-type-archive-artist_post_type .flip-cards div {
+      width: 500px;
+      height: 500px; } }
+
+.post-type-archive-artist_post_type .front-flip {
+  z-index: 10; }
+  @media (min-width: 1000px) {
+    .post-type-archive-artist_post_type .front-flip {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center; } }
+
+.post-type-archive-artist_post_type .back-flip {
+  transform: rotateY(180deg); }
+
+@media (min-width: 1000px) {
+  .post-type-archive-artist_post_type .artist-list-item:after {
+    content: "";
+    display: table;
+    clear: both; } }
 
 /*--------------------------------------------------------------
 # Forms

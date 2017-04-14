@@ -1,8 +1,14 @@
 .post-type-archive-artist_post_type{
 
-    .main-artists-list{
+    .main-artists-list, .secondary-artists-list{
         padding:0;
         margin:0;
+            @include desktop{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                    background: linear-gradient(180deg,rgba(245, 234, 155, 0.2) 0,rgba(245, 234, 155, 0.8)),url(../../images/black-background-design.jpg) no-repeat 50%;
+            }
     }
 
     .artist-list-item{
@@ -11,6 +17,10 @@
         display:flex;
         z-index:2;
         padding-bottom:3rem;
+         @include desktop{
+            max-width: 500px;
+            padding-left: 1.5%
+         }
             img{
                 box-shadow: 0px 0px 5rem rgb(130, 128, 128);
             }
@@ -29,6 +39,9 @@
     .black-background{
         background:url('../../images/cube-background.jpg')center top;
         background-size:cover;
+         @include desktop{
+            background:none;
+         }
         
     }
 
@@ -55,6 +68,69 @@
 
     .main-navigation{
         background-color: rgb(245, 234, 155);
+    }
+
+    //Coin Flip Animation
+
+    .flip-container{
+        position:relative;
+        -webkit-perspective:1000;
+        perspective:500px;
+    }
+
+    .flip-cards{
+        width: 321px;
+        height: 320px;
+        position:relative;
+        -webkit-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        border-radius: 50%;
+          @include desktop{
+                width:500px;
+                height:500px;
+            }
+    }
+
+
+    .flip-cards:hover{
+        transform: rotateY( 180deg );
+        -webkit-transform: rotateY(180deg);
+    }
+
+    .flip-cards div{
+        width: 321px;
+        height: 320px;
+        position:absolute;
+        border-radius:50%;  
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+            @include desktop{
+                width:500px;
+                height:500px;
+            }
+    }
+
+    .front-flip{
+        z-index: 10;
+         @include desktop{
+            display: flex;
+            justify-content: center;
+         }
+    }
+
+    .back-flip{
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY( 180deg );
+    }
+
+    .artist-list-item:after {
+        @include desktop{
+            content: "";
+            display: table;
+            clear: both;
+        }
     }
 
 

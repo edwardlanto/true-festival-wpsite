@@ -2,16 +2,6 @@
 
 .home{
 
-	// .content-area:not(.section-header){
-	// 	@include desktop{
-	// 		padding:0 1rem;
-	// 		background-color:#000;
-	// 	}
-	// }
-
-    
-	
-
 	.hero-container{
 		height:600px;
 		width:100vw;
@@ -23,8 +13,6 @@
 				height:100vh;
 			}
 	}
-
-
 
 	@keyframes fade-in{
 		0%{
@@ -512,6 +500,8 @@
 			display:none;
 		}
 	}
+	
+	
 	.artist-content-container{
 		display:none;
 			@include desktop{
@@ -519,15 +509,16 @@
 			}
 		p{
 			position: relative;
-    		color: #f9e660;
-    		width: 60vw;
-    		max-width: 924px;
-    		line-height: 2rem;
-    		font-size: 2rem;
-    		margin-left: 28px;
-			display:inline-block;
-			box-sizing:border-box;
-			right:100px;
+			color: #ff1b9e;
+			width: 60vw;
+			max-width: 924px;
+			line-height: 2rem;
+			font-size: 2rem;
+			margin-left: 28px;
+			display: inline-block;
+			box-sizing: border-box;
+			right: 100px;
+			text-shadow: 0px 0px 28px white;
 		}
 	}
 

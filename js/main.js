@@ -47,17 +47,25 @@
 
     //Gallery Popup function
 
-    function gallerypopup() {
+    function resize() {
         if(WideWindow.width() >= 830){
             $('.gallery-image-container').addClass('popup');
+            $('.map-container').attr("width","800");
+            $('.map-container').attr("height","600");
         }else{
             $('.gallery-image-container').removeClass('popup');
             $('.artist-social').remove();
             $('.artist-icon-container').remove();
+            $('.map-container').attr("width","320vw");
+            $('.map-container').attr("height","250");
         }
     }
 
-    gallerypopup();
+    //width 800
+    //height 600
+    //of map
+
+    resize();
 
     // $('.popup').on('click', function(event){
     //     event.preventDefault();

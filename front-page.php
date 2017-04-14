@@ -111,7 +111,7 @@ get_header(); ?>
                     <h2>Location</h2>
                 </div><!--location marker container-->
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.349470115585!2d-79.35678208442066!3d43.64089697912185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb1edc1adaeb%3A0x7f0cc8bf3c3be45e!2s11+Polson+St%2C+Toronto%2C+ON+M5A+1A4!5e0!3m2!1sen!2sca!4v1491793278417" width="320" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.3445344452834!2d-79.63959908450067!3d43.703388579119604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b39581378ce23%3A0x536b1b10e1c54a05!2s6900+Airport+Rd%2C+Mississauga%2C+ON+L4V+1E8!5e0!3m2!1sen!2sca!4v1492159482425" width="320" height="250" class="map-container"frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div><!--map-->
                 <div class="content-container">
                     <p>Ontario, Canada</p>
