@@ -51,7 +51,7 @@
 }
 
 .artist-social{
-	background-color:$main__yellow;
+	background-color:#f5da16;
 	opacity:1;
 	position:absolute;
 	top:0;
@@ -82,7 +82,7 @@
 				@include desktop{
                     width:500px;
                     height:500px;
-					filter: contrast(129%) invert(28%) saturate(1);
+					filter: contrast(200%) invert(24%) saturate(0);
 					border:9px solid #fff;
 				
                 }

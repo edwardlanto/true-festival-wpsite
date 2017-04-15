@@ -497,7 +497,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       display: inline-block; } }
   .home .artist-content-container p {
     position: relative;
-    color: #ff1b9e;
+    color: #fff;
     width: 60vw;
     max-width: 40rem;
     line-height: 2rem;
@@ -505,8 +505,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     margin-left: 28px;
     display: inline-block;
     box-sizing: border-box;
-    right: 100px;
-    text-shadow: 0px 0px 28px white; }
+    right: 100px; }
 
 .home .carousel-cell.artist-list-item.is-selected .artist-content-container p {
   margin-left: 9rem; }
@@ -517,7 +516,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   height: 1050px; }
   @media (min-width: 830px) {
     .home .venue-section {
-      height: 1175px; } }
+      height: 1000px; } }
 
 .home .map iframe {
   max-width: none; }
@@ -587,8 +586,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       -ms-flex-pack: center;
-          justify-content: center;
-      height: 1120px; } }
+          justify-content: center; } }
 
 .home .gallery-image-container {
   max-height: 57vw;
@@ -653,11 +651,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @media (min-width: 830px) {
   .home .gallery-image-container img {
-    filter: grayscale(100%);
     opacity: 0.7;
     transition: all 0.2s linear; }
     .home .gallery-image-container img:hover {
-      filter: grayscale(0%);
       opacity: 1; } }
 
 html {
@@ -1149,7 +1145,7 @@ table {
       justify-content: center; }
 
 .artist-social {
-  background-color: #f5ea9b;
+  background-color: #f5da16;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -1178,7 +1174,7 @@ table {
       .artist-list-item img {
         width: 500px;
         height: 500px;
-        filter: contrast(129%) invert(28%) saturate(1);
+        filter: contrast(200%) invert(24%) saturate(0);
         border: 9px solid #fff; } }
   .artist-list-item h3 {
     position: absolute;
@@ -1373,10 +1369,11 @@ table {
 .blog .dropdown-container {
   padding: 0 1rem; }
   .blog .dropdown-container p {
-    color: #fff; }
+    color: #fff;
+    font-family: 'raleway'; }
     @media (min-width: 830px) {
       .blog .dropdown-container p {
-        color: #000; } }
+        color: #fff; } }
 
 .blog .read-more-dropdown {
   display: -ms-flexbox;
@@ -1434,6 +1431,9 @@ table {
     z-index: 20;
     box-shadow: 1px 1px 74px 7px #1e264e;
     border: 4px solid #fff; } }
+
+.blog .dropdown-wrapper {
+  background-color: #000; }
 
 @media (min-width: 830px) {
   .blog .article-wrapper {

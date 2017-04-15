@@ -48,8 +48,9 @@
         padding: 0 1rem;
             p{
                 color:#fff;
+                font-family:'raleway';
                     @include desktop{
-                        color:#000;
+                        color:#fff;
                     }
             }
     }
@@ -113,6 +114,10 @@
             border: 4px solid #fff;
 
         }
+    }
+
+    .dropdown-wrapper{
+        background-color:#000;
     }
 
     .article-wrapper{

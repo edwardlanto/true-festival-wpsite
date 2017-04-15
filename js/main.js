@@ -51,7 +51,7 @@
         if(WideWindow.width() >= 830){
             $('.gallery-image-container').addClass('popup');
             $('.map-container').attr("width","800");
-            $('.map-container').attr("height","600");
+            $('.map-container').attr("height","400");
             $('.mobile-dropdown').show();
             $('.dropdown-button').css({"display":"none"});
         }else{
