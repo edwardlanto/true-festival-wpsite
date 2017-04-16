@@ -10,7 +10,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
@@ -20,24 +19,16 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<ul class="archive-gallery-list">
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
+				<li class="gallery-image-container">
+					<?php
+						the_post_thumbnail('large');
+					?>
+				</li>
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+			</ul>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

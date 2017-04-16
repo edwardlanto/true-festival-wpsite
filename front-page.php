@@ -11,14 +11,14 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 	    <main id="main" class="site-main" role="main">
-        <!--<div class="folding-cube-container">
+        <div class="folding-cube-container">
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
                 <div class="sk-cube4 sk-cube"></div>
                 <div class="sk-cube3 sk-cube"></div>
             </div>
-        </div>-->
+        </div>
             <div class="hero-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero-image.jpg" class="home-hero">
                 <a href="https://www.eventbrite.ca/e/true-north-music-festival-tickets-32441901601" class="general-button hero-button">Buy Tickets</a>
