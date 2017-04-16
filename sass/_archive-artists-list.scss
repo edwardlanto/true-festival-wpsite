@@ -13,6 +13,7 @@
                 justify-content: space-around;
                 background: linear-gradient(180deg,rgba(245, 234, 155, 0.2) 0,rgba(245, 234, 155, 0.8)),url(../../images/black-background-design.jpg) no-repeat 50%;
                 height: 1200px;
+                background: linear-gradient(180deg,rgba(245, 234, 155, 0.2) 0,rgba(245, 234, 155, 0.8)),url(../../images/black-background-design.jpg) no-repeat 50%;
             }
     }
 
@@ -49,7 +50,6 @@
             height:320px;
             width: 27%;
             margin-bottom: 2rem;
-
          }
         
     }
@@ -88,7 +88,7 @@
     .flip-container{
         position:relative;
         -webkit-perspective:1000;
-        perspective:1000px;
+        perspective:500px;
     }
 
     .flip-cards{
@@ -112,22 +112,25 @@
         -webkit-transform: rotateY(180deg);
     }
 
-    .flip-cards div{
-        width: 321px;
-        height: 320px;
-        position:absolute;
-        border-radius:50%;  
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-            @include desktop{
-                width:320px;
-                height:320px
-            }
+    .flip-cards{ 
+        div{
+            width: 321px;
+            height: 320px;
+            position:absolute;
+            border-radius:50%;  
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+                @include desktop{
+                    width:320px;
+                    height:320px
+                }
+        }
     }
 
     .fa{
         transform: translate(9rem,-8rem);
     }
+
 
     .front-flip{
         z-index: 10;
@@ -142,6 +145,12 @@
         transform: rotateY( 180deg );
     }
 
-
+    .artist-list-item:after {
+        @include desktop{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
 
 }//post-type-wrapper

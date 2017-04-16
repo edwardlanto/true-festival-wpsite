@@ -17,7 +17,11 @@
 	background-color:red;
 }
 
+<<<<<<< HEAD
 $desktop-width: 830px;
+=======
+$desktop-width: 1000px;
+>>>>>>> 537ea536dafac7047f947fc0822f011252c921ae
     @mixin desktop{
         @media (min-width: $desktop-width){
             @content;

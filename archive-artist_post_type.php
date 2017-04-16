@@ -44,6 +44,7 @@ get_header(); ?>
 											<i class="fa fa-instagram" aria-hidden="true"></i>
 											<i class="fa fa-twitter" aria-hidden="true"></i>
                             			</div>
+										<div><?php the_post_thumbnail('large') ?></div>
 									</div><!--back-flip-->
 								</div><!--flip-cards-->
 							</div><!--flip-container-->

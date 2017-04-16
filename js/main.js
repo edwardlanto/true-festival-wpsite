@@ -79,6 +79,21 @@
         }
         $(this).next().slideToggle('600', 'swing');
     })
+    // $('.popup').on('click', function(event){
+    //     event.preventDefault();
+    //     $('.gallery-popup').css({"display": "block"});
+    //     $(this).clone();
+    //     $('.gallery-popup').append($(this))
+    //     $('.gallery-popup').fadeIn('1000', 'linear');
+    // })
+
+    // $('.gallery-image-container').on('click', function(event){
+    //     event.preventDefault();
+    //     // $('.popup-description').empty();
+    //     $('.gallery-popup').css({"display" : "block"})
+    //     $(this).clone()
+    //     $('.gallery-popup').append($(this));
+    // });
 
     
 

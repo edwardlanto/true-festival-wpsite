@@ -11,14 +11,22 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 	    <main id="main" class="site-main" role="main">
+<<<<<<< HEAD
         <div class="folding-cube-container">
+=======
+        <!--<div class="folding-cube-container">
+>>>>>>> 537ea536dafac7047f947fc0822f011252c921ae
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
                 <div class="sk-cube4 sk-cube"></div>
                 <div class="sk-cube3 sk-cube"></div>
             </div>
+<<<<<<< HEAD
         </div>
+=======
+        </div>-->
+>>>>>>> 537ea536dafac7047f947fc0822f011252c921ae
             <div class="hero-container">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero-image.jpg" class="home-hero">
                 <a href="https://www.eventbrite.ca/e/true-north-music-festival-tickets-32441901601" class="general-button hero-button">Buy Tickets</a>
@@ -37,6 +45,7 @@ get_header(); ?>
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                 </div><!--calendar-->
             </div><!--social-icons-cotnainer-->
+<<<<<<< HEAD
         <section class="news-section">
             <div class="header-container">
                 <h3 class="section-header">News</h3>
@@ -44,6 +53,12 @@ get_header(); ?>
             <div class="news-button-container">
                 <a href="<?php echo get_post_type_archive_link('post'); ?>" class="news-button"><span class="news-button-span">Full Lineup</span></a>
             </div>
+=======
+        <section>
+            <div class="header-container">
+                <h3 class="section-header">News</h3>
+            </div><!--section header-->
+>>>>>>> 537ea536dafac7047f947fc0822f011252c921ae
             <div class="news-post-wrapper fadein">
                 <?php
                 $args = array( 'numberposts' => 4, 'order' => 'DESC', 'orderby' => 'date');
@@ -116,6 +131,7 @@ get_header(); ?>
                 <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.3445344452834!2d-79.63959908450067!3d43.703388579119604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b39581378ce23%3A0x536b1b10e1c54a05!2s6900+Airport+Rd%2C+Mississauga%2C+ON+L4V+1E8!5e0!3m2!1sen!2sca!4v1492159482425" width="320" height="250" class="map-container"frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div><!--map-->
+<<<<<<< HEAD
                 <div class="location-content-container">
                 <div class="content-container">
                     <h3>Venue</h3>
@@ -130,6 +146,13 @@ get_header(); ?>
                     <p>Only 30 minutes drive from downtown Toronto</p>
                 </div><!--perks-container-->
                 </div><!--location-content-container-->
+=======
+                <div class="content-container">
+                    <p>Ontario, Canada</p>
+                    <p>11 Polson St</p>
+                    <p>778-898-8165</p>
+                </div>
+>>>>>>> 537ea536dafac7047f947fc0822f011252c921ae
             </div><!--map-content-container-->
         </section>
         <section class="gallery-section fadein">

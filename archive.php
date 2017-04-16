@@ -1,4 +1,6 @@
-<!--<?php
+
+<?php
+
 /**
  * The template for displaying archive pages.
  *
@@ -17,7 +19,7 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</header> 
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -39,5 +41,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>-->
+<?php get_footer(); ?>
