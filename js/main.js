@@ -54,6 +54,9 @@
             $('.map-container').attr("height","400");
             $('.mobile-dropdown').show();
             $('.dropdown-button').css({"display":"none"});
+            $('.gallery-breakpoint').removeClass("gallery-breakpoint");
+            $('.archive-gallery-list').addClass("main-carousel");
+            $('.gallery-image-container').addClass("carousel-cell");
         }else{
             $('.gallery-image-container').removeClass('popup');
             $('.artist-social').remove();
@@ -65,10 +68,6 @@
         }
     }
 
-    //width 800
-    //height 600
-    //of map
-
     resize();
 
     $('.read-more').on('click', function(){
@@ -79,21 +78,28 @@
         }
         $(this).next().slideToggle('600', 'swing');
     })
-    // $('.popup').on('click', function(event){
-    //     event.preventDefault();
-    //     $('.gallery-popup').css({"display": "block"});
-    //     $(this).clone();
-    //     $('.gallery-popup').append($(this))
-    //     $('.gallery-popup').fadeIn('1000', 'linear');
-    // })
 
-    // $('.gallery-image-container').on('click', function(event){
-    //     event.preventDefault();
-    //     // $('.popup-description').empty();
-    //     $('.gallery-popup').css({"display" : "block"})
-    //     $(this).clone()
-    //     $('.gallery-popup').append($(this));
-    // });
+
+    //Gallery Popup
+
+    $('.gallery-breakpoint').on('click', function(){
+        $(this).toggleClass('image-grow');
+    })
+
+    //Small Gallery Desktop Popup
+        
+    $('.small-gallery-item').on('click', function(){
+        $('.gallery-popup-container').empty();  
+        $('.popup-container').css({"display":"flex"});
+        $(this).clone().css({"width":"80%", "height":"100%", "margin":"0 auto", "border":"none","margin-top":"4%", "filter":"none"}).appendTo('.gallery-popup-container').children().css({"object-fit":"fill","border":"10px solid #fff"})
+    })
+
+    $('.x-button').on('click', function(){
+        $('.popup-container').fadeOut("fast");
+    })
+
+
+
 
     
 

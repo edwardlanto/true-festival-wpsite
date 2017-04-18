@@ -42,7 +42,7 @@ get_header(); ?>
                 <h3 class="section-header">News</h3>
             </div><!--section header-->
             <div class="news-button-container">
-                <a href="<?php echo get_post_type_archive_link('post'); ?>" class="news-button"><span class="news-button-span">Full Lineup</span></a>
+                <a href="<?php echo get_post_type_archive_link('post'); ?>" class="news-button"><span class="news-button-span">News Archive</span></a>
             </div>
             <div class="news-post-wrapper fadein">
                 <?php

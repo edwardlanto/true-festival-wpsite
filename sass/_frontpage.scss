@@ -48,24 +48,29 @@
 
     .general-button{
         @include general-button;
+        
     }
 
     .hero-button{
         align-self: flex-end;
-        position:absolute;
+        position: absolute;
+        display: -ms-flexbox;
         display: flex;
-    justify-content: center;
-    align-items: center;
-        color:white;
-        font-size:1.5rem;
-        text-decoration:none;
-        border-radius:12px;
-        text-transform:uppercase;
-        background-color:white;
-        color: black;
-        bottom:4rem;
-        transition:all 0.2s ease;
-        font-family:'montserratmedium';
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        border-radius: 12px;
+        text-transform: uppercase;
+        background-color: #fff;
+        color: #000;
+        bottom: 4rem;
+        transition: all .2s ease;
+        font-family: montserratmedium;
+        bottom: 70px;
             &:active{
                 transform:translate(0, 5px);
                 box-shadow:none;
@@ -274,12 +279,13 @@
         top: 0px;
         left: 0px;
         width: 0%;
-        height: 100%;
+        height: 130%;
         background-color: rgba(255,255,255,0.4);
         -webkit-transition: none;
         -moz-transition: none;
         -ms-transition: none;
         transition: none;
+        border-radius: 15px;
 }
 
     .news-button:hover:after {
@@ -592,8 +598,8 @@
 
     .location-marker-container{
         display: flex;
-    justify-content: flex-start;
-    margin: 2rem;
+        justify-content: flex-start;
+        margin: 2rem;
     }
 
     .location-content-container{
@@ -605,8 +611,8 @@
     .map-content-container{
         padding:0 2rem;
         display: flex;
-    flex-direction: column;
-    justify-content: center;
+        flex-direction: column;
+        justify-content: center;
         align-items:center;
         h2{
             text-align:center;
