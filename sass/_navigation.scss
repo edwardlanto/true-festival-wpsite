@@ -123,6 +123,10 @@ a {
 
 }
 
+.menu-item{
+	margin:0 1rem;
+}
+
 #responsive-menu-button{
 	box-shadow:none;
 	background:transparent;
@@ -168,8 +172,17 @@ a {
 				font-family: 'montserratmedium';
     			text-shadow: 2px 2px 14px #000;
 				color:#fff;	
-    			margin: 0 1rem;
+    			padding: 0.2rem 1.2rem;;
 			}
+	}
+
+	.current_page_item{
+		a{
+			color:#e10684;
+			text-shadow:none;
+			background-color:#fff;
+			border-radius:15px;
+		}
 	}
 
 	.main-navigation{

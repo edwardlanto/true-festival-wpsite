@@ -36,14 +36,33 @@
     display:flex;
     justify-content:center;
     align-items:center;
-        box-shadow: 0 -12px 69px -3px white;
-    i{
-    color:black;
-    padding:1rem;
-    font-size:1.5rem;
-    height:50px;
-    width:50px;
-    }
+    box-shadow: 0 -12px 69px -3px white;
+        i{
+            color:black;
+            padding:1rem;
+            font-size:1.5rem;
+            height:50px;
+            width:50px;
+                @include desktop{
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    border:2px solid #fff;
+                    font-size:2.2rem;
+                    padding:2rem;
+                    margin:0 2rem;
+                    border-radius:15px;
+                    background-color:#fff;
+                    color:#000;
+                    transition:all 0.3s linear;
+                    cursor:pointer;
+                        &:hover{
+                            background-color:#e10684;
+                            color:#fff;
+
+                        }
+                }
+        }
     }
 
     .general-button{
@@ -116,19 +135,21 @@
 
     .news-title{
         position: absolute;
-    left: 70%;
-    font-size: 1.5rem;
-    bottom: 16rem;
+        left: 70%;
+        font-size: 1.5rem;
+        bottom: 16rem;
             @include desktop{
-                left: 19rem;
-            bottom: 26rem;
-            font-size: 2.5rem;
+                left: 0;
+                bottom: 26rem;
+                font-size: 2.5rem;
+                width: 100%;
+                text-align: center;
             }
             a{
                 color:white;
                 text-decoration:none;
                 text-transform:uppercase;
-                font-family:'montserrat';
+                font-family:'montserratbold';
                 border-radius:8px;
             }
     }

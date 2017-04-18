@@ -54,9 +54,6 @@
             $('.map-container').attr("height","400");
             $('.mobile-dropdown').show();
             $('.dropdown-button').css({"display":"none"});
-            $('.gallery-breakpoint').removeClass("gallery-breakpoint");
-            $('.archive-gallery-list').addClass("main-carousel");
-            $('.gallery-image-container').addClass("carousel-cell");
         }else{
             $('.gallery-image-container').removeClass('popup');
             $('.artist-social').remove();
@@ -91,12 +88,15 @@
     $('.small-gallery-item').on('click', function(){
         $('.gallery-popup-container').empty();  
         $('.popup-container').css({"display":"flex"});
-        $(this).clone().css({"width":"80%", "height":"100%", "margin":"0 auto", "border":"none","margin-top":"4%", "filter":"none"}).appendTo('.gallery-popup-container').children().css({"object-fit":"fill","border":"10px solid #fff"})
-    })
+        $(this).clone().addClass("chosen-image").css({"width":"50%", "height":"100%", "margin":"0 auto", "border":"none","margin-top":"4%", "filter":"none"}).appendTo('.gallery-popup-container').children().css({"object-fit":"fill","border":"10px solid #fff"});
+        $('.chosen-image').children().css({"width":"auto", "height":"auto"});
+
+    });
 
     $('.x-button').on('click', function(){
         $('.popup-container').fadeOut("fast");
     })
+
 
 
 

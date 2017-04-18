@@ -1,3 +1,5 @@
+<?php /* Template Name: gallery_post_type*/ ?>
+
 <?php
 /**
  * The template for displaying archive pages.
@@ -20,19 +22,19 @@ get_header(); ?>
 			</div>
 			<div class="gallery-list-container">
 				<ul class="archive-gallery-list">
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php $loop = new WP_Query( array( 'post_type' => 'gallery_post_type', 'posts_per_page' => -1 ) ); ?>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<li class="gallery-image-container gallery-breakpoint">
 						<?php
 							the_post_thumbnail('large');
 						?>
 					</li>
-				<?php endwhile; ?>
+				<?php endwhile; wp_reset_query(); ?>
 				</ul><!--archive-gallery-list-->
 			</div>
 			<div class="popup-container">
 				<div class="x-button"></div>
 				<div class="gallery-popup-container"></div><!--gallery-popup-container-->
-				<h3>Next</h3>
 			</div><!--popup-container-->
 			<section class="small-gallery-section">
 				<div class="photos-header-container">
@@ -40,13 +42,14 @@ get_header(); ?>
 				</div>
 				<div section class="small-gallery-container">
 					<ul class="small-gallery-list">
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php $loop = new WP_Query( array( 'post_type' => 'gallery_post_type', 'posts_per_page' => -1 ) ); ?>
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						<li class="small-gallery-item">
 							<?php
 								the_post_thumbnail('large');
 							?>
 						</li>
-					<?php endwhile; ?>
+					<?php endwhile; wp_reset_query(); ?>
 					</ul>
 				</div><!--small-gallery-container-->
 			</section>

@@ -93,7 +93,7 @@ get_header(); ?>
                             <div class="artist-icon-container">
                                 <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-soundcloud" aria-hidden="true"></i>
                             </div>
                         </div><!--artist-image-container-->
                     </a>
@@ -106,6 +106,13 @@ get_header(); ?>
                 ?>
             </ul>
         </section>
+        <nav class="social">
+          <ul>
+              <li><a href="http://twitter.com/gian_michelle">Twitter <i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://facebook.com/gian.michelle">Facebook <i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://dribbble.com/gian_michelle">Dribbble <i class="fa fa-dribbble"></i></a></li>
+        </ul>
+      </nav>
         <section class="venue-section fadein">
             <h3 class="section-header">Venue</h3>
             <div class="map-content-container">

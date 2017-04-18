@@ -1,3 +1,4 @@
+<?php /* Template Name: Artists*/ ?>
 <?php
 /**
  * The template for displaying archive pages.

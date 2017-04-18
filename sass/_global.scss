@@ -39,6 +39,9 @@
 				transition:all 0.3s linear;
 				 i{
 					color:#000;
+						&:hover{
+							color:#fff;
+						}
 				 }
 			}
 	}
@@ -107,6 +110,20 @@
 		}
 }
 
+.menu-item{
+	a{
+		transition:all 0.3s linear;
+		@include desktop{
+			&:hover{
+				color:#e10684;
+				text-shadow:none;
+				background-color:#fff;
+				border-radius: 15px;
+			}
+		}
+	}
+}
+
 .section-header{
 	text-align:center;
 	text-transform:uppercase;
@@ -118,4 +135,73 @@
 	color:white;
 	width: 100%;
 	letter-spacing:3px;
+}
+
+//Rolling Icons
+
+a{
+	text-decoration:none;
+}
+
+.social {
+	position: fixed;
+	top: 7rem;
+	z-index:100;
+	 a{
+		 color:white;
+	 }
+}
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-270px, 0);
+  -moz-transform: translate(-270px, 0);
+  -ms-transform: translate(-270px, 0);
+  transform: translate(-308px, 0);
+}
+.social ul li {
+	display: block;
+	margin: 5px;
+	background: rgba(0, 0, 0, 0.36);
+	width: 300px;
+	text-align: right;
+	padding: 10px;
+	border-radius: 0 30px 30px 0;
+	transition: all 0.5s;
+	border:2px solid #e10684;
+}
+.social ul li:hover {
+	transform: translate(140px, 0);
+	background: rgba(0,0,0,0.6)
+}
+
+.social ul li:hover a {
+  color: #fff;
+  font-size:24px;
+  font-family:"montserratbold";
+}
+.social ul li:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #fff;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #e10684;
+  transform: rotate(0deg);
 }
