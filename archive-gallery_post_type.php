@@ -17,6 +17,7 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+			
 			<div class="section-header">
 				<h3>Gallery</h3>
 			</div>
@@ -37,8 +38,8 @@ get_header(); ?>
 				<div class="gallery-popup-container"></div><!--gallery-popup-container-->
 			</div><!--popup-container-->
 			<section class="small-gallery-section">
-				<div class="photos-header-container">
-					<h2 class="photos-header">Photos</h2>
+				<div class="arhive-header-container">
+					<h2 class="archive-header">Photos</h2>
 				</div>
 				<div section class="small-gallery-container">
 					<ul class="small-gallery-list">

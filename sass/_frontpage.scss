@@ -30,37 +30,36 @@
 }
 
     .social-icons-container{
-    height:80px;
-    width:100%;
-    background-color:$main__yellow;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow: 0 -12px 69px -3px white;
-        i{
-            color:black;
-            padding:1rem;
-            font-size:1.5rem;
-            height:50px;
-            width:50px;
-                @include desktop{
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    border:2px solid #fff;
-                    font-size:2.2rem;
-                    padding:2rem;
-                    margin:0 2rem;
-                    border-radius:15px;
-                    background-color:#fff;
-                    color:#000;
-                    transition:all 0.3s linear;
-                    cursor:pointer;
-                        &:hover{
-                            background-color:#e10684;
-                            color:#fff;
-
-                        }
+        height:80px;
+        width:100%;
+        background-color:$main__yellow;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        box-shadow: 0 -12px 69px -3px white;
+            i{
+                color:black;
+                padding:1rem;
+                font-size:1.5rem;
+                height:50px;
+                width:50px;
+                    @include desktop{
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        border:2px solid #fff;
+                        font-size:2.2rem;
+                        padding:2rem;
+                        margin:0 2rem;
+                        border-radius:15px;
+                        background-color:#fff;
+                        color:#000;
+                        transition:all 0.1s linear;
+                        cursor:pointer;
+                            &:hover{
+                                background-color:#e10684;
+                                color:#fff;
+                            }
                 }
         }
     }
@@ -106,7 +105,7 @@
 
     .news-post-wrapper{
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
         justify-content: space-between;
         padding:30px 15px 0 15px;
         background-color:black;
@@ -173,10 +172,10 @@
 
     .news-gradient{
         position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.4;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.4;
         transition:all 0.5s linear;
             &:hover{
                 background-color:transparent;
@@ -257,8 +256,8 @@
 
     .news-post-container:first-child{
         border-top: 9px solid rgba(245, 234, 155, 0.76);
-    padding-top: 2rem;
-    border-radius: 5%;
+        padding-top: 2rem;
+        border-radius: 5%;
             @include desktop{
                 border-radius:5px;
                 padding-top:1rem;
@@ -268,8 +267,8 @@
 
     .news-post-container:last-child{
         border-bottom: 9px solid rgba(245, 234, 155, 0.76);
-    margin-top: 2rem;
-    border-radius: 5%;
+        margin-top: 2rem;
+        border-radius: 5%;
             @include desktop{
                 margin-top:auto;
                 border-radius:5px;

@@ -15,6 +15,9 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+				<div class="archive-header-container">
+					    <h2 class="archive-header">Main Stage</h2>
+				</div>
 				<div class="artist-section-header">
 					<h1 class="section-header">Main Stage</h1>
 				</div>
@@ -54,10 +57,13 @@ get_header(); ?>
 					<?php endforeach; ?>
 				</ul>
 				</section>
+				<div class="archive-header-container">
+					<h2 class="archive-header">Fusion Stage</h2>
+				</div>
 				<div class="artist-section-header">
 					<h1 class="section-header">Fusion Stage</h1>
 				</div>
-				<section class="main-artists-wrapper">
+				<section class="secondary-artists-wrapper">
 					<ul class="secondary-artists-list">
 					<?php
 					$args  = array(

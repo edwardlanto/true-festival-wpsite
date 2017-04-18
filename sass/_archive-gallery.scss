@@ -17,15 +17,23 @@
     }
 
     #site-navigation{
-        background-color: rgba(245, 234, 155, 0.2);
+        background-color:rgba(233, 217, 155,0.3) !important;
+        box-shadow:none;
+        border-bottom: 2px solid #f5ea9b;
     }
+    
     .page-title{
         display:none;
     }
 
     .small-gallery-section{
         @include desktop{
-            background:#000;
+            background:linear-gradient( to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100% ),
+            url("../../images/dash-berlin-background.jpg")no-repeat center -209px;
+            background-size:cover,cover;
+            // position:fixed;
+            filter: grayscale(70%);
+
         }
     }
 
@@ -137,26 +145,7 @@
 
     //Photo Gallery
 
-    .photos-header{
-        display:none;
-        text-transform:uppercase;
-        font-family:'montserratbold';
-            @include desktop{
-                display:block;
-                color: white;
-                border-bottom: 2px solid $main__yellow;
-                width: 80vw;
-                margin: 0 auto;
-                margin-bottom: 1rem;
-                padding-bottom:1rem;
-                cursor:pointer;
-                margin-top:2rem;
-                    &:hover{
-                        color:$main__yellow;
-                    }
-
-            }
-    }
+   
 
     .small-gallery-container{
         display:none;
@@ -169,6 +158,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-top: 13rem;
     }
 
     .small-gallery-item{
@@ -226,21 +216,7 @@
         cursor:pointer;
     }
 
-    // .small-gallery-item:first-child{
-    //     animation-name:first-image-move;
-    //     animation-duration:0.5s;
-    //     animation-timing-function:linear;
-    //     animation-iteration-count:1;
-    // }
-
-    // @keyframes first-image-move{
-    //     from{
-    //         transform:translate(200px,100px);
-    //     }
-    //     to{
-    //         transform:translate(0,0);
-    //     }
-    // }
+   
 
 
 

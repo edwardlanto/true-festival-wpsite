@@ -1,7 +1,14 @@
-.page-template-archive-artist_post_type{
+.page-template-archive-artist_post_type, .post-type-archive-artist_post_type{
 
     .page-header{
         display:none;
+    }
+
+
+    #site-navigation{
+        background-color:rgba(233, 217, 155,0.3) !important;
+        box-shadow:none;
+        border-bottom: 2px solid #f5ea9b;
     }
 
     .main-artists-list, .secondary-artists-list{
@@ -11,10 +18,30 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                background: linear-gradient(180deg,rgba(245, 234, 155, 0.2) 0,rgba(245, 234, 155, 0.8)),url(../../images/black-background-design.jpg) no-repeat 50%;
-                height: 1200px;
-                background: linear-gradient(180deg,rgba(245, 234, 155, 0.2) 0,rgba(245, 234, 155, 0.8)),url(../../images/black-background-design.jpg) no-repeat 50%;
+                padding-top:20rem;
             }
+    }
+
+    .archive-header-container{
+        position: absolute;
+        z-index: 100;
+         h2{
+             width:25rem;
+         }
+    }
+
+    .main-artists-wrapper{
+        background: linear-gradient( to bottom, rgba(116, 62, 112, 0.7) 0%, rgba(0,0,0,1) 100% ),
+        url("../../images/main-artists-background.jpg") no-repeat center -278px;
+        background-size:cover,cover;
+        filter: grayscale(40%);
+    }
+
+    .secondary-artists-wrapper{
+        background: linear-gradient( to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,1) 100% ),
+        url("../../images/ben-nicky-background.jpg") no-repeat center -278px;
+        background-size:cover,cover;
+        border-top:4rem solid #1e264e;
     }
 
     .artist-list-item{
@@ -36,6 +63,9 @@
         width:100vw;
         display:flex;
         justify-content:center;
+            @include desktop{
+                display:none;
+            }
     }
 
     .main-artists-wrapper{

@@ -17,7 +17,9 @@ get_header(); ?>
 				</header>
 				<?php endif; ?>
                 <div class="article-wrapper">
-                    <?php /* Start the Loop */ ?>
+                    <div class="archive-header-container">
+					    <h2 class="archive-header">News</h2>
+				    </div>
                     <?php while ( have_posts() ) : the_post(); ?>
                     <article class="article-container">
                         <div class="image-title-container">

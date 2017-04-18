@@ -99,7 +99,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         border-radius: 15px;
         background-color: #fff;
         color: #000;
-        transition: all 0.3s linear;
+        transition: all 0.1s linear;
         cursor: pointer; }
         .home .social-icons-container i:hover {
           background-color: #e10684;
@@ -1223,12 +1223,11 @@ table {
         align-items: center; }
 
 .menu-item a {
-  transition: all 0.3s linear; }
+  transition: all 0.2s linear; }
   @media (min-width: 830px) {
     .menu-item a:hover {
       color: #e10684;
       text-shadow: none;
-      background-color: #fff;
       border-radius: 15px; } }
 
 .section-header {
@@ -1252,6 +1251,10 @@ a {
   z-index: 100; }
   .social a {
     color: white; }
+  .social .fa:before {
+    position: relative;
+    right: 15px;
+    font-size: 27px; }
 
 .social ul {
   padding: 0px;
@@ -1266,7 +1269,7 @@ a {
   padding: 10px;
   border-radius: 0 30px 30px 0;
   transition: all 0.5s;
-  border: 2px solid #e10684; }
+  border: 2px solid #f5ea9b; }
 
 .social ul li:hover {
   transform: translate(140px, 0);
@@ -1286,34 +1289,69 @@ a {
 .social ul li i {
   margin-left: 10px;
   color: #fff;
-  background: #fff;
   padding: 10px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   font-size: 20px;
-  background: #e10684;
   transform: rotate(0deg); }
 
-.page-template-archive-artist_post_type .page-header {
+.archive-header {
+  display: none;
+  text-transform: uppercase;
+  font-family: 'montserratbold'; }
+  @media (min-width: 830px) {
+    .archive-header {
+      display: block;
+      color: white;
+      border-bottom: 2px solid #f5ea9b;
+      width: 13rem;
+      margin-top: 0;
+      padding-bottom: 1rem;
+      cursor: pointer;
+      transform: translate(6rem, 7rem);
+      font-size: 3rem; }
+      .archive-header:hover {
+        color: #f5ea9b; } }
+
+.page-template-archive-artist_post_type .page-header, .post-type-archive-artist_post_type .page-header {
   display: none; }
 
-.page-template-archive-artist_post_type .main-artists-list, .page-template-archive-artist_post_type .secondary-artists-list {
+.page-template-archive-artist_post_type #site-navigation, .post-type-archive-artist_post_type #site-navigation {
+  background-color: rgba(233, 217, 155, 0.3) !important;
+  box-shadow: none;
+  border-bottom: 2px solid #f5ea9b; }
+
+.page-template-archive-artist_post_type .main-artists-list, .page-template-archive-artist_post_type .secondary-artists-list, .post-type-archive-artist_post_type .main-artists-list, .post-type-archive-artist_post_type .secondary-artists-list {
   padding: 0;
   margin: 0; }
   @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .main-artists-list, .page-template-archive-artist_post_type .secondary-artists-list {
+    .page-template-archive-artist_post_type .main-artists-list, .page-template-archive-artist_post_type .secondary-artists-list, .post-type-archive-artist_post_type .main-artists-list, .post-type-archive-artist_post_type .secondary-artists-list {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      background: linear-gradient(180deg, rgba(245, 234, 155, 0.2) 0, rgba(245, 234, 155, 0.8)), url(../../images/black-background-design.jpg) no-repeat 50%;
-      height: 1200px;
-      background: linear-gradient(180deg, rgba(245, 234, 155, 0.2) 0, rgba(245, 234, 155, 0.8)), url(../../images/black-background-design.jpg) no-repeat 50%; } }
+      padding-top: 20rem; } }
 
-.page-template-archive-artist_post_type .artist-list-item {
+.page-template-archive-artist_post_type .archive-header-container, .post-type-archive-artist_post_type .archive-header-container {
+  position: absolute;
+  z-index: 100; }
+  .page-template-archive-artist_post_type .archive-header-container h2, .post-type-archive-artist_post_type .archive-header-container h2 {
+    width: 25rem; }
+
+.page-template-archive-artist_post_type .main-artists-wrapper, .post-type-archive-artist_post_type .main-artists-wrapper {
+  background: linear-gradient(to bottom, rgba(116, 62, 112, 0.7) 0%, black 100%), url("../../images/main-artists-background.jpg") no-repeat center -278px;
+  background-size: cover,cover;
+  filter: grayscale(40%); }
+
+.page-template-archive-artist_post_type .secondary-artists-wrapper, .post-type-archive-artist_post_type .secondary-artists-wrapper {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, black 100%), url("../../images/ben-nicky-background.jpg") no-repeat center -278px;
+  background-size: cover,cover;
+  border-top: 4rem solid #1e264e; }
+
+.page-template-archive-artist_post_type .artist-list-item, .post-type-archive-artist_post_type .artist-list-item {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
@@ -1323,39 +1361,42 @@ a {
   z-index: 2;
   padding-bottom: 3rem; }
   @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .artist-list-item {
+    .page-template-archive-artist_post_type .artist-list-item, .post-type-archive-artist_post_type .artist-list-item {
       max-width: 320px;
       padding-left: 1.5%; } }
-  .page-template-archive-artist_post_type .artist-list-item img {
+  .page-template-archive-artist_post_type .artist-list-item img, .post-type-archive-artist_post_type .artist-list-item img {
     box-shadow: 0px 0px 5rem #828080; }
 
-.page-template-archive-artist_post_type .artist-section-header {
+.page-template-archive-artist_post_type .artist-section-header, .post-type-archive-artist_post_type .artist-section-header {
   width: 100vw;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center; }
+  @media (min-width: 830px) {
+    .page-template-archive-artist_post_type .artist-section-header, .post-type-archive-artist_post_type .artist-section-header {
+      display: none; } }
 
-.page-template-archive-artist_post_type .black-background {
+.page-template-archive-artist_post_type .black-background, .post-type-archive-artist_post_type .black-background {
   background: url("../../images/cube-background.jpg") center top;
   background-size: cover; }
   @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .black-background {
+    .page-template-archive-artist_post_type .black-background, .post-type-archive-artist_post_type .black-background {
       background: none;
       height: 320px;
       width: 27%;
       margin-bottom: 2rem; } }
 
-.page-template-archive-artist_post_type .artist-list-item {
+.page-template-archive-artist_post_type .artist-list-item, .post-type-archive-artist_post_type .artist-list-item {
   padding: 1rem 0; }
-  .page-template-archive-artist_post_type .artist-list-item img {
+  .page-template-archive-artist_post_type .artist-list-item img, .post-type-archive-artist_post_type .artist-list-item img {
     filter: grayscale(0%) contrast(100%);
     border: 9px solid #fff; }
     @media (min-width: 830px) {
-      .page-template-archive-artist_post_type .artist-list-item img {
+      .page-template-archive-artist_post_type .artist-list-item img, .post-type-archive-artist_post_type .artist-list-item img {
         width: 320px;
         height: 320px; } }
-  .page-template-archive-artist_post_type .artist-list-item h3 {
+  .page-template-archive-artist_post_type .artist-list-item h3, .post-type-archive-artist_post_type .artist-list-item h3 {
     position: absolute;
     text-align: center;
     width: 100%;
@@ -1368,14 +1409,14 @@ a {
     z-index: 10;
     bottom: 6rem; }
 
-.page-template-archive-artist_post_type .main-navigation {
+.page-template-archive-artist_post_type .main-navigation, .post-type-archive-artist_post_type .main-navigation {
   background-color: #f5ea9b; }
 
-.page-template-archive-artist_post_type .flip-container {
+.page-template-archive-artist_post_type .flip-container, .post-type-archive-artist_post_type .flip-container {
   position: relative;
   perspective: 500px; }
 
-.page-template-archive-artist_post_type .flip-cards {
+.page-template-archive-artist_post_type .flip-cards, .post-type-archive-artist_post_type .flip-cards {
   width: 321px;
   height: 320px;
   position: relative;
@@ -1383,15 +1424,15 @@ a {
   transform-style: preserve-3d;
   border-radius: 50%; }
   @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .flip-cards {
+    .page-template-archive-artist_post_type .flip-cards, .post-type-archive-artist_post_type .flip-cards {
       width: 320px;
       height: 320px; } }
 
-.page-template-archive-artist_post_type .flip-cards:hover {
+.page-template-archive-artist_post_type .flip-cards:hover, .post-type-archive-artist_post_type .flip-cards:hover {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg); }
 
-.page-template-archive-artist_post_type .flip-cards div {
+.page-template-archive-artist_post_type .flip-cards div, .post-type-archive-artist_post_type .flip-cards div {
   width: 321px;
   height: 320px;
   position: absolute;
@@ -1399,27 +1440,27 @@ a {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; }
   @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .flip-cards div {
+    .page-template-archive-artist_post_type .flip-cards div, .post-type-archive-artist_post_type .flip-cards div {
       width: 320px;
       height: 320px; } }
 
-.page-template-archive-artist_post_type .fa {
+.page-template-archive-artist_post_type .fa, .post-type-archive-artist_post_type .fa {
   transform: translate(9rem, -8rem); }
 
-.page-template-archive-artist_post_type .front-flip {
+.page-template-archive-artist_post_type .front-flip, .post-type-archive-artist_post_type .front-flip {
   z-index: 10; }
   @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .front-flip {
+    .page-template-archive-artist_post_type .front-flip, .post-type-archive-artist_post_type .front-flip {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
           justify-content: center; } }
 
-.page-template-archive-artist_post_type .back-flip {
+.page-template-archive-artist_post_type .back-flip, .post-type-archive-artist_post_type .back-flip {
   transform: rotateY(180deg); }
 
 @media (min-width: 830px) {
-  .page-template-archive-artist_post_type .artist-list-item:after {
+  .page-template-archive-artist_post_type .artist-list-item:after, .post-type-archive-artist_post_type .artist-list-item:after {
     content: "";
     display: table;
     clear: both; } }
@@ -1439,12 +1480,16 @@ a {
       .page-template-archive-gallery_post_type .section-header, .post-type-archive-gallery_post_type .section-header {
         margin-bottom: 0; } }
   .page-template-archive-gallery_post_type #site-navigation, .post-type-archive-gallery_post_type #site-navigation {
-    background-color: rgba(245, 234, 155, 0.2); }
+    background-color: rgba(233, 217, 155, 0.3) !important;
+    box-shadow: none;
+    border-bottom: 2px solid #f5ea9b; }
   .page-template-archive-gallery_post_type .page-title, .post-type-archive-gallery_post_type .page-title {
     display: none; }
   @media (min-width: 830px) {
     .page-template-archive-gallery_post_type .small-gallery-section, .post-type-archive-gallery_post_type .small-gallery-section {
-      background: #000; } }
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../../images/dash-berlin-background.jpg") no-repeat center -209px;
+      background-size: cover,cover;
+      filter: grayscale(70%); } }
   @media (min-width: 830px) {
     .page-template-archive-gallery_post_type #main, .post-type-archive-gallery_post_type #main {
       background-color: #000; } }
@@ -1516,23 +1561,6 @@ a {
       width: 70px; } }
   .page-template-archive-gallery_post_type .flickity-page-dots.dot, .post-type-archive-gallery_post_type .flickity-page-dots.dot {
     background: #fff; }
-  .page-template-archive-gallery_post_type .photos-header, .post-type-archive-gallery_post_type .photos-header {
-    display: none;
-    text-transform: uppercase;
-    font-family: 'montserratbold'; }
-    @media (min-width: 830px) {
-      .page-template-archive-gallery_post_type .photos-header, .post-type-archive-gallery_post_type .photos-header {
-        display: block;
-        color: white;
-        border-bottom: 2px solid #f5ea9b;
-        width: 80vw;
-        margin: 0 auto;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        cursor: pointer;
-        margin-top: 2rem; }
-        .page-template-archive-gallery_post_type .photos-header:hover, .post-type-archive-gallery_post_type .photos-header:hover {
-          color: #f5ea9b; } }
   .page-template-archive-gallery_post_type .small-gallery-container, .post-type-archive-gallery_post_type .small-gallery-container {
     display: none; }
     @media (min-width: 830px) {
@@ -1544,7 +1572,8 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: start;
-        justify-content: flex-start; }
+        justify-content: flex-start;
+    margin-top: 13rem; }
   .page-template-archive-gallery_post_type .small-gallery-item, .post-type-archive-gallery_post_type .small-gallery-item {
     width: 23%;
     height: 200px;
@@ -1667,15 +1696,14 @@ a {
   display: none; }
   @media (min-width: 830px) {
     .blog .news-page-background {
-      background: url(../../images/home-hero-image.jpg) 50% no-repeat;
-      background-size: cover;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%), url("../../images/jordan-suckley-background.jpg") 50% no-repeat;
+      background-size: cover,cover;
       display: inline-block;
       width: 100vw;
-      height: 500px;
+      height: 550px;
       position: fixed;
       z-index: 10;
-      top: 6rem;
-      filter: blur(6px); } }
+      top: 6rem; } }
 
 @media (min-width: 830px) {
   .blog .article-container {
@@ -1702,10 +1730,14 @@ a {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    background: linear-gradient(to bottom, #dbdbdb 0%, #d1d1d1 0%, #e2e2e2 79%, #fefefe 100%); } }
+    background: linear-gradient(to bottom, #dbdbdb 0%, #d1d1d1 0%, #e2e2e2 79%, #fefefe 100%);
+    margin-top: 20rem; } }
 
-.blog .article-container:first-child {
-  margin-top: 7rem; }
+.blog .archive-header-container {
+  position: relative;
+  top: -10rem;
+  z-index: 100;
+  right: 28rem; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -2011,7 +2043,6 @@ a {
 .current_page_item a {
   color: #e10684;
   text-shadow: none;
-  background-color: #fff;
   border-radius: 15px; }
 
 .main-navigation {
