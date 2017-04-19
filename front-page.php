@@ -25,21 +25,29 @@ get_header(); ?>
             </div><!--hero-container-->
             <div class="social-icons-container">
                 <div>
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <a href="https://www.facebook.com/electricescapeevents">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
                 </div><!--facebook-->
                 <div>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <a href="https://twitter.com/eescapecanada">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
                 </div><!--twitter-->
                 <div>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <a href="https://www.instagram.com/electric_escape/">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
                 </div><!--instagram-->
                 <div>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
                 </div><!--calendar-->
-            </div><!--social-icons-cotnainer-->
+            </div><!--social-icons-container-->
         <section class="news-section">
             <div class="header-container">
-                <h3 class="section-header">News</h3>
+                <h3 class="section-header">News & Events</h3>
             </div><!--section header-->
             <div class="news-button-container">
                 <a href="<?php echo get_post_type_archive_link('post'); ?>" class="news-button"><span class="news-button-span">News Archive</span></a>
@@ -91,7 +99,9 @@ get_header(); ?>
                             <div class="artist-social">
                             </div>
                             <div class="artist-icon-container">
-                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                <a href="<?php echo CFS()->get('artist_facebook');?>">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </a>
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                                 <i class="fa fa-soundcloud" aria-hidden="true"></i>
                             </div>

@@ -19,7 +19,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 			
 			<div class="section-header">
-				<h3>Gallery</h3>
+				<h3>Media</h3>
 			</div>
 			<div class="gallery-list-container">
 				<ul class="archive-gallery-list">

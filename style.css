@@ -92,7 +92,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
             align-items: center;
         -ms-flex-pack: center;
             justify-content: center;
-        border: 2px solid #fff;
+        border: 4px solid #fff;
         font-size: 2.2rem;
         padding: 2rem;
         margin: 0 2rem;
@@ -102,7 +102,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         transition: all 0.1s linear;
         cursor: pointer; }
         .home .social-icons-container i:hover {
-          background-color: #e10684;
+          background-color: #6E9D9C;
           color: #fff; } }
 
 .home .general-button {
@@ -317,22 +317,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   position: relative;
   top: 3rem; }
 
-.home .news-button:after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0%;
-  height: 130%;
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: none;
-  border-radius: 15px; }
-
-.home .news-button:hover:after {
-  width: 120%;
-  background-color: rgba(255, 255, 255, 0);
-  transition: all 0.3s ease-out; }
-
 .home .news-button-container {
   display: -ms-flexbox;
   display: flex;
@@ -425,7 +409,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: #f5ea9b;
     position: relative; }
 
-.home .artist-button:after {
+.home .artist-button:after, .home .news-button:after, .home .gallery-link:after {
   content: "";
   position: absolute;
   top: 0px;
@@ -435,7 +419,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   background-color: rgba(255, 255, 255, 0.4);
   transition: none; }
 
-.home .artist-button:hover:after {
+.home .artist-button:hover:after, .home .gallery-link:hover:after, .home .news-button:hover:after {
   width: 120%;
   background-color: rgba(255, 255, 255, 0);
   transition: all 0.3s ease-out; }
@@ -518,7 +502,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: none; }
   @media (min-width: 830px) {
     .home .artist-content-container {
-      display: inline-block; } }
+      display: inline-block;
+      width: 680px; } }
   .home .artist-content-container p {
     position: relative;
     color: #fff;
@@ -649,21 +634,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border: 1px solid #f5ea9b;
   padding: 13px 56px;
   z-index: 100; }
-
-.home .gallery-link:after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0%;
-  height: 100%;
-  background-color: #f5ea9b;
-  transition: none; }
-
-.home .gallery-link:hover:after {
-  width: 120%;
-  background-color: rgba(255, 255, 255, 0);
-  transition: all 0.3s ease-out; }
 
 @media (min-width: 830px) {
   .home .gallery-list li {
@@ -1214,6 +1184,10 @@ table {
     font-family: 'montserratbold';
     z-index: 10;
     bottom: 0; }
+    @media (min-width: 830px) {
+      .artist-list-item h3 {
+        font-size: 3rem;
+        bottom: 9rem; } }
   .artist-list-item a {
     display: -ms-flexbox;
     display: flex;
@@ -1700,10 +1674,10 @@ a {
       background-size: cover,cover;
       display: inline-block;
       width: 100vw;
-      height: 550px;
+      height: 770px;
       position: fixed;
       z-index: 10;
-      top: 6rem; } }
+      top: 2rem; } }
 
 @media (min-width: 830px) {
   .blog .article-container {
