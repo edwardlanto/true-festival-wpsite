@@ -230,3 +230,24 @@ a{
 
             }
     }
+
+.fixed-buy-button-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.fixed-buy-button{
+	height: 50px;
+    // width: 300px;
+    background: #f5ea9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	z-index:100;
+	position: fixed;
+	bottom: 0;
+	font-family:"montserratbold";
+	font-size:2rem;
+	text-transform:uppercase;
+}
