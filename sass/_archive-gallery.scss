@@ -216,6 +216,57 @@
         cursor:pointer;
     }
 
+    //Social Media
+
+    .sidebar{
+        background-color:#000;
+        @include desktop{
+            background:linear-gradient( to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100% ),
+            url('../../images/codeblack-background.jpg')no-repeat center;
+            background-size:cover, cover;
+        }
+    }
+
+    .fa-instagram{
+        font-size:4rem;
+    }
+
+    .sb_instagram_header{
+        padding-top: 10rem !important;
+    }
+
+    .social-header-container{
+        display:flex;
+        align-items:center;
+        border-bottom: 2px solid $main__yellow;
+        padding-bottom:1rem;
+        width:13rem;
+        justify-content:space-between;
+            @include desktop{
+                margin-left: 3rem;
+                width:25rem;
+            }
+            i, h2{
+                font-size:2.5rem;
+                color:#fff;
+                    @include desktop{
+                        font-size:4rem;
+                    }
+            }
+            h2{
+                font-family:"montserratmedium";
+                margin-bottom:0;
+            }
+    }
+
+    .sbi_photo{
+        border: 10px solid #fff;
+    }
+
+    #page{
+        background-color:#000;
+    }
+
    
 
 

@@ -237,7 +237,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .home .news-excerpt-container p {
     color: white;
     font-size: 14px;
-    font-family: 'montserrat';
+    font-family: 'raleway';
     max-width: 80vw; }
     @media (min-width: 830px) {
       .home .news-excerpt-container p {
@@ -517,7 +517,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     right: 100px; }
 
 .home .carousel-cell.artist-list-item.is-selected .artist-content-container p {
-  margin-left: 9rem; }
+  margin-left: 7rem; }
 
 .home .venue-section {
   background: linear-gradient(180deg, rgba(225, 6, 132, 0.16) 0, rgba(225, 6, 132, 0.07)), url(../../images/black-background-design.jpg) no-repeat 50%;
@@ -637,7 +637,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @media (min-width: 830px) {
   .home .gallery-list li {
-    width: 48vw; } }
+    width: 50vw; } }
 
 @media (min-width: 830px) {
   .home .gallery-list li:first-child, .home .gallery-list li:nth-child(3) {
@@ -649,6 +649,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     transition: all 0.2s linear; }
     .home .gallery-image-container img:hover {
       opacity: 1; } }
+
+.home .gallery-section {
+  background: #000; }
 
 html {
   font-family: sans-serif;
@@ -947,13 +950,6 @@ th {
   src: url("../../fonts/montserrat-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-thin-webfont.woff2") format("woff2"), url("../../fonts/montserrat-thin-webfont.woff") format("woff"), url("../../fonts/montserrat-thin-webfont.svg#montserratthin") format("svg");
   font-weight: normal;
   font-style: lighter; }
-
-@font-face {
-  font-family: 'ralewaylight';
-  src: url("raleway-light-webfont.eot");
-  src: url("raleway-light-webfont.eot?#iefix") format("embedded-opentype"), url("raleway-light-webfont.woff2") format("woff2"), url("raleway-light-webfont.woff") format("woff"), url("raleway-light-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
 
 @font-face {
   font-family: 'raleway';
@@ -1318,12 +1314,14 @@ a {
 .page-template-archive-artist_post_type .main-artists-wrapper, .post-type-archive-artist_post_type .main-artists-wrapper {
   background: linear-gradient(to bottom, rgba(116, 62, 112, 0.7) 0%, black 100%), url("../../images/main-artists-background.jpg") no-repeat center -278px;
   background-size: cover,cover;
-  filter: grayscale(40%); }
+  filter: grayscale(40%);
+  background-color: #000; }
 
 .page-template-archive-artist_post_type .secondary-artists-wrapper, .post-type-archive-artist_post_type .secondary-artists-wrapper {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, black 100%), url("../../images/ben-nicky-background.jpg") no-repeat center -278px;
   background-size: cover,cover;
-  border-top: 4rem solid #1e264e; }
+  border-top: 4rem solid #1e264e;
+  background-color: #000; }
 
 .page-template-archive-artist_post_type .artist-list-item, .post-type-archive-artist_post_type .artist-list-item {
   -ms-flex-pack: center;
@@ -1386,58 +1384,25 @@ a {
 .page-template-archive-artist_post_type .main-navigation, .post-type-archive-artist_post_type .main-navigation {
   background-color: #f5ea9b; }
 
-.page-template-archive-artist_post_type .flip-container, .post-type-archive-artist_post_type .flip-container {
-  position: relative;
-  perspective: 500px; }
-
-.page-template-archive-artist_post_type .flip-cards, .post-type-archive-artist_post_type .flip-cards {
-  width: 321px;
-  height: 320px;
-  position: relative;
-  transition: all 0.4s linear;
-  transform-style: preserve-3d;
-  border-radius: 50%; }
-  @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .flip-cards, .post-type-archive-artist_post_type .flip-cards {
-      width: 320px;
-      height: 320px; } }
-
-.page-template-archive-artist_post_type .flip-cards:hover, .post-type-archive-artist_post_type .flip-cards:hover {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); }
-
-.page-template-archive-artist_post_type .flip-cards div, .post-type-archive-artist_post_type .flip-cards div {
-  width: 321px;
-  height: 320px;
+.page-template-archive-artist_post_type .archive-artist-icons, .post-type-archive-artist_post_type .archive-artist-icons {
   position: absolute;
-  border-radius: 50%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; }
-  @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .flip-cards div, .post-type-archive-artist_post_type .flip-cards div {
-      width: 320px;
-      height: 320px; } }
+  font-size: 2rem;
+  bottom: 5rem;
+  color: #fff;
+  width: 150px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .page-template-archive-artist_post_type .archive-artist-icons i:hover, .post-type-archive-artist_post_type .archive-artist-icons i:hover {
+    color: #e10684;
+    cursor: pointer; }
 
-.page-template-archive-artist_post_type .fa, .post-type-archive-artist_post_type .fa {
-  transform: translate(9rem, -8rem); }
-
-.page-template-archive-artist_post_type .front-flip, .post-type-archive-artist_post_type .front-flip {
-  z-index: 10; }
-  @media (min-width: 830px) {
-    .page-template-archive-artist_post_type .front-flip, .post-type-archive-artist_post_type .front-flip {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: center;
-          justify-content: center; } }
-
-.page-template-archive-artist_post_type .back-flip, .post-type-archive-artist_post_type .back-flip {
-  transform: rotateY(180deg); }
-
-@media (min-width: 830px) {
-  .page-template-archive-artist_post_type .artist-list-item:after, .post-type-archive-artist_post_type .artist-list-item:after {
-    content: "";
-    display: table;
-    clear: both; } }
+.page-template-archive-artist_post_type .artist-list-item, .post-type-archive-artist_post_type .artist-list-item {
+  transition: all 0.3s linear;
+  cursor: pointer; }
+  .page-template-archive-artist_post_type .artist-list-item:hover, .post-type-archive-artist_post_type .artist-list-item:hover {
+    transform: translateY(-15px); }
 
 .page-template-archive-gallery_post_type, .post-type-archive-gallery_post_type {
   /* position dots up a bit */
@@ -1589,6 +1554,43 @@ a {
     top: 12rem;
     left: 71rem;
     cursor: pointer; }
+  .page-template-archive-gallery_post_type .sidebar, .post-type-archive-gallery_post_type .sidebar {
+    background-color: #000; }
+    @media (min-width: 830px) {
+      .page-template-archive-gallery_post_type .sidebar, .post-type-archive-gallery_post_type .sidebar {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../../images/codeblack-background.jpg") no-repeat center;
+        background-size: cover, cover; } }
+  .page-template-archive-gallery_post_type .fa-instagram, .post-type-archive-gallery_post_type .fa-instagram {
+    font-size: 4rem; }
+  .page-template-archive-gallery_post_type .sb_instagram_header, .post-type-archive-gallery_post_type .sb_instagram_header {
+    padding-top: 10rem !important; }
+  .page-template-archive-gallery_post_type .social-header-container, .post-type-archive-gallery_post_type .social-header-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    border-bottom: 2px solid #f5ea9b;
+    padding-bottom: 1rem;
+    width: 13rem;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    @media (min-width: 830px) {
+      .page-template-archive-gallery_post_type .social-header-container, .post-type-archive-gallery_post_type .social-header-container {
+        margin-left: 3rem;
+        width: 25rem; } }
+    .page-template-archive-gallery_post_type .social-header-container i, .page-template-archive-gallery_post_type .social-header-container h2, .post-type-archive-gallery_post_type .social-header-container i, .post-type-archive-gallery_post_type .social-header-container h2 {
+      font-size: 2.5rem;
+      color: #fff; }
+      @media (min-width: 830px) {
+        .page-template-archive-gallery_post_type .social-header-container i, .page-template-archive-gallery_post_type .social-header-container h2, .post-type-archive-gallery_post_type .social-header-container i, .post-type-archive-gallery_post_type .social-header-container h2 {
+          font-size: 4rem; } }
+    .page-template-archive-gallery_post_type .social-header-container h2, .post-type-archive-gallery_post_type .social-header-container h2 {
+      font-family: "montserratmedium";
+      margin-bottom: 0; }
+  .page-template-archive-gallery_post_type .sbi_photo, .post-type-archive-gallery_post_type .sbi_photo {
+    border: 10px solid #fff; }
+  .page-template-archive-gallery_post_type #page, .post-type-archive-gallery_post_type #page {
+    background-color: #000; }
 
 .blog #site-navigation {
   box-shadow: none !important;
@@ -1712,6 +1714,10 @@ a {
   top: -10rem;
   z-index: 100;
   right: 28rem; }
+
+.blog .footer-list {
+  position: relative;
+  z-index: 100; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -1975,7 +1981,10 @@ a {
   background: transparent; }
 
 .nav-header {
-  font-size: 1.8rem; }
+  font-size: 1.24rem; }
+  @media (min-width: 830px) {
+    .nav-header {
+      font-size: 1.8rem; } }
 
 .main-navigation {
   width: 100%;
@@ -2022,6 +2031,24 @@ a {
 .main-navigation {
   box-shadow: -9px 12px 69px 18px #fff;
   z-index: 20; }
+
+.footer-list {
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1rem 0;
+  background-color: #000; }
+  .footer-list li {
+    color: #fff;
+    font-family: 'montserratmedium';
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+    border-bottom: 2px solid #fff; }
+    .footer-list li:hover {
+      color: #f5ea9b; }
 
 /*--------------------------------------------------------------
 # Accessibility

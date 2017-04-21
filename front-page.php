@@ -41,7 +41,7 @@ get_header(); ?>
                 </div><!--instagram-->
                 <div>
                     <a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">
-                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                         f
                     </a>
                 </div><!--calendar-->
             </div><!--social-icons-container-->
@@ -102,8 +102,12 @@ get_header(); ?>
                                 <a href="<?php echo CFS()->get('artist_facebook');?>">
                                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                 </a>
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                <i class="fa fa-soundcloud" aria-hidden="true"></i>
+                                <a href="<?php echo CFS()->get('artist_instagram"');?>">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="<?php echo CFS()->get('artist_soundcloud');?>">
+                                    <i class="fa fa-soundcloud" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div><!--artist-image-container-->
                     </a>
@@ -118,9 +122,9 @@ get_header(); ?>
         </section>
         <nav class="social">
           <ul>
-              <li><a href="http://twitter.com/gian_michelle">Twitter <i class="fa fa-twitter"></i></a></li>
-              <li><a href="http://facebook.com/gian.michelle">Facebook <i class="fa fa-facebook"></i></a></li>
-              <li><a href="http://dribbble.com/gian_michelle">Dribbble <i class="fa fa-dribbble"></i></a></li>
+              <li><a href="https://twitter.com/eescapecanada">Twitter <i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/electricescapeevents">Facebook <i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">Youtube <i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
         <section class="venue-section fadein">

@@ -35,23 +35,13 @@ get_header(); ?>
 					?>
 					<div class="black-background">
 						<li class="artist-list-item">
-							<div class="flip-container">
-								<div class="flip-cards">
-									<div class="front-flip">
-										<h3><?php the_title(); ?></h3>
-										<div><?php the_post_thumbnail('large'); ?></div>
-									</div><!--front-flip-->
-									<div class="back-flip">
-										<div>
-											<?php the_post_thumbnail('large') ?>
-											<i class="fa fa-facebook-square" aria-hidden="true"></i>
-											<i class="fa fa-instagram" aria-hidden="true"></i>
-											<i class="fa fa-twitter" aria-hidden="true"></i>
-                            			</div>
-										<div><?php the_post_thumbnail('large') ?></div>
-									</div><!--back-flip-->
-								</div><!--flip-cards-->
-							</div><!--flip-container-->
+							<h3><?php the_title(); ?></h3>
+							<div><?php the_post_thumbnail('large'); ?></div>
+							<div class="archive-artist-icons">
+								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+                        	</div>
 						</li>
 					</div>
 					<?php endforeach; ?>
@@ -69,7 +59,7 @@ get_header(); ?>
 					$args  = array(
 					'posts_per_page'  => -1,
 					'category'        => 5,
-					'orderby'         => 'post_date',
+					'orderby'         => 'title',
 					'order'           => 'ASC',
 					'post_type'       => 'artist_post_type' );
 					$posts = get_posts($args);
@@ -77,27 +67,19 @@ get_header(); ?>
 					?>
 					<div class="black-background">
 						<li class="artist-list-item">
-							<div class="flip-container">
-								<div class="flip-cards">
-									<div class="front-flip">
-										<h3><?php the_title(); ?></h3>
-										<div><?php the_post_thumbnail('large'); ?></div>
-									</div><!--front-flip-->
-									<div class="back-flip">
-										<div><?php the_post_thumbnail('large') ?></div>
-										<div class="artist-icon-container">
-											<i class="fa fa-facebook-square" aria-hidden="true"></i>
-											<i class="fa fa-instagram" aria-hidden="true"></i>
-											<i class="fa fa-twitter" aria-hidden="true"></i>
-                            			</div>
-									</div><!--back-flip-->
-								</div><!--flip-cards-->
-							</div><!--flip-container-->
+							<h3><?php the_title(); ?></h3>
+							<div><?php the_post_thumbnail('large'); ?></div>
+							<div class="archive-artist-icons">
+								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+                        	</div>
 						</li>
 					</div>
 					<?php endforeach; ?>
 				</ul>
 			</section>
+			<?php get_footer(); ?>
 
 
 		</main><!-- #main -->

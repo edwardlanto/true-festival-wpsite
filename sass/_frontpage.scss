@@ -204,7 +204,7 @@
             p{
                 color:white;
                 font-size:14px;
-                font-family:'montserrat';
+                font-family:'raleway';
                 max-width:80vw;
                     @include desktop{
                     font-size: 1.2rem;
@@ -569,7 +569,7 @@
     .carousel-cell.artist-list-item.is-selected{
         .artist-content-container{
             p{
-                margin-left:9rem;
+                margin-left:7rem;
             }
         }
     }
@@ -703,7 +703,7 @@
 
     .gallery-list li{
         @include desktop{
-            width:48vw;
+            width:50vw;
         }
     }
 
@@ -723,5 +723,9 @@
                     }
             }
     }
+
+    .gallery-section{
+        background:#000;
+    }
 	
-}
+}//Home Wrapper

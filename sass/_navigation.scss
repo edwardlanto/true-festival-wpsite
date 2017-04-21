@@ -133,7 +133,10 @@ a {
 }
 
 .nav-header{
-	font-size:1.8rem
+	font-size: 1.24rem;
+		@include desktop{
+			font-size:1.8rem
+		}
 }
 
 
@@ -187,4 +190,25 @@ a {
 	.main-navigation{
 		box-shadow:-9px 12px 69px 18px #fff;
 		z-index:20;
+	}
+
+	//Footer
+
+	.footer-list{
+		margin:0;
+		padding:0;
+		display:flex;
+		justify-content:space-around;
+		padding:1rem 0;
+		background-color:#000;
+			li{
+				color:#fff;
+				font-family:'montserratmedium';
+				font-size:1.5rem;
+				transition:all 0.3s linear;
+				border-bottom:2px solid #fff;
+					&:hover{
+						color:$main__yellow;
+					}
+			}
 	}

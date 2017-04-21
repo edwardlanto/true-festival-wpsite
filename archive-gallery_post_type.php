@@ -17,7 +17,6 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			
 			<div class="section-header">
 				<h3>Media</h3>
 			</div>
@@ -38,7 +37,7 @@ get_header(); ?>
 				<div class="gallery-popup-container"></div><!--gallery-popup-container-->
 			</div><!--popup-container-->
 			<section class="small-gallery-section">
-				<div class="arhive-header-container">
+				<div class="archive-header-container">
 					<h2 class="archive-header">Photos</h2>
 				</div>
 				<div section class="small-gallery-container">
@@ -53,6 +52,18 @@ get_header(); ?>
 					<?php endwhile; wp_reset_query(); ?>
 					</ul>
 				</div><!--small-gallery-container-->
+			</section>
+			<section class="social-media-section">
+				<div class="section-header">
+					<h3>Social Media</h3>
+				</div>
+				<div class="sidebar">
+					<div class="social-header-container">
+						<h2 class="social-header">Instagram</h2>
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+					<?php get_sidebar(); ?>
+				</div>
 			</section>
 
 		</main><!-- #main -->
