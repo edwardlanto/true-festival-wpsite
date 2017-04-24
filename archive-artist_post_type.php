@@ -21,6 +21,14 @@ get_header(); ?>
 				<div class="artist-section-header">
 					<h1 class="section-header">Main Stage</h1>
 				</div>
+				 <nav class="social">
+            		<ul>
+                		<li><a href="https://twitter.com/eescapecanada">Twitter <i class="fa fa-twitter"></i></a></li>
+                		<li><a href="https://www.facebook.com/electricescapeevents">Facebook <i class="fa fa-facebook"></i></a></li>
+                		<li><a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">Youtube <i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                		<li><a href="https://www.instagram.com/electric_escape/">Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            		</ul>
+      			</nav>
 				<section class="main-artists-wrapper">
 					<ul class="main-artists-list">
 					<?php

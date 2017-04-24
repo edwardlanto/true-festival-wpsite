@@ -15,12 +15,13 @@ get_header(); ?>
                         <li><a href="https://twitter.com/eescapecanada">Twitter <i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://www.facebook.com/electricescapeevents">Facebook <i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">Youtube <i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/electric_escape/">Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                     </ul>
                 </nav>
                 <div class="header-container">
                     <h3 class="section-header">Contact Us</h3>
                 </div><!--header-container-->
-                <h2 class="question-header">Got a Question?</h2>
+                <h2 class="question-header">Have a Question?</h2>
                 <?php while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( 'template-parts/content', 'page' ); ?>
                 <?php endwhile; // End of the loop. ?>

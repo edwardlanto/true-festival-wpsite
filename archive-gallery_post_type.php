@@ -53,6 +53,14 @@ get_header(); ?>
 					</ul>
 				</div><!--small-gallery-container-->
 			</section>
+			 <nav class="social">
+            <ul>
+                <li><a href="https://twitter.com/eescapecanada">Twitter <i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/electricescapeevents">Facebook <i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">Youtube <i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/electric_escape/">Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+      		</nav>
 			<section class="social-media-section">
 				<div class="section-header">
 					<h3>Social Media</h3>

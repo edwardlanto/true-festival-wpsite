@@ -14,6 +14,8 @@
 					<a href="artists"><li>Artists</li></a>
 					<a href="gallery"><li>Media</li></a>
 					<a href="news"><li>News</li></a>
+					<a href="https://electricescape.ticketzone.com/"><li>Events</li></a>
+					<a href="contact-us"><li>Contact Us</li></a>
 				</ul>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

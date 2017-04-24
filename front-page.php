@@ -107,10 +107,14 @@ get_header(); ?>
                 setup_postdata($post);?>
                 <div class="news-post-container">
                     <div class="news-date"><?php red_starter_posted_on(); ?></div>
-                    <div class="front-news-image-container">
-                            <div class="news-gradient"></div>
-                            <div><?php the_post_thumbnail('small'); ?></div>
-                    </div><!--front-news-image-container-->
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="front-news-image-container">
+                        <div class="news-gradient"></div>
+                                <div>
+                                    <?php the_post_thumbnail('small'); ?>
+                                </div>
+                        </div><!--front-news-image-container-->
+                    </a>
                     <h1 class="news-title">
                         <a href="<?php the_permalink();?>"><?php the_title();?></a>
                     </h1>
@@ -128,6 +132,7 @@ get_header(); ?>
                 <li><a href="https://twitter.com/eescapecanada">Twitter <i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://www.facebook.com/electricescapeevents">Facebook <i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UC7pLTJmlcQbBGIoOR0BoXgw">Youtube <i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/electric_escape/">Instagram <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             </ul>
       </nav>
         <section class="gallery-section fadein">

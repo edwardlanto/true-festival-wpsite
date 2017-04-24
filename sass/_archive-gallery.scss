@@ -31,8 +31,8 @@
             background:linear-gradient( to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100% ),
             url("../../images/dash-berlin-background.jpg")no-repeat center -209px;
             background-size:cover,cover;
-            // position:fixed;
             filter: grayscale(70%);
+            padding-bottom:4rem;
 
         }
     }

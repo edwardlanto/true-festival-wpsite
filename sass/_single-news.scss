@@ -10,9 +10,10 @@
 
     .image-container{
         position:relative;
+        display:flex;
+        justify-content:center;
+        background-color:#000;
             @include desktop{
-                display:flex;
-                justify-content:center;
                 padding-top:2rem;
             }
         img{
@@ -59,7 +60,12 @@
         left: 30px;
         color:#fff;
         font-family:'montserratmedium';
+    }
 
+    .archive-header{
+        @include desktop{
+            margin-bottom:89px;
+        }
     }
 
 

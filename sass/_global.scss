@@ -21,7 +21,6 @@
 }
 
 	.artist-icon-container{
-		display: none;
 			@include desktop{
 				color: #fff;
 				font-size: 45px;
@@ -150,6 +149,7 @@ a{
 	position: fixed;
 	top: 7rem;
 	z-index:100;
+	width:50px;
 		a{
 		 	color:white;
 	 	}

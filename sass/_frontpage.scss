@@ -81,14 +81,12 @@
         color: #fff;
         font-size: 1.5rem;
         text-decoration: none;
-        border-radius: 12px;
         text-transform: uppercase;
         background-color: #fff;
         color: #000;
-        bottom: 4rem;
         transition: all .2s ease;
         font-family: montserratmedium;
-        bottom: 70px;
+        bottom:0;
             &:active{
                 transform:translate(0, 5px);
                 box-shadow:none;
@@ -96,7 +94,6 @@
             &:hover{
                 color:white;
                 background-color:#E10684;
-                border-radius:12px;
             }
         }
 
@@ -138,9 +135,10 @@
 
     .news-title{
         position: absolute;
-        left: 70%;
+        left: 45%;
         font-size: 1.5rem;
         bottom: 16rem;
+        bottom:21rem;
             @include desktop{
                 left: 0;
                 bottom: 26rem;
