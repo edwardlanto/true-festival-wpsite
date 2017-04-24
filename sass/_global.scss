@@ -132,7 +132,7 @@
 	text-transform:uppercase;
 	font-family:'raleway';
 	padding:10px 0;
-	font-size:2rem;
+	font-size:20px;
 	margin:0;
 	background-color:rgb(38, 47, 101);
 	color:white;
@@ -237,17 +237,57 @@ a{
 	justify-content: center;
 }
 
-.fixed-buy-button{
-	height: 50px;
-    // width: 300px;
-    background: #f5ea9b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	z-index:100;
-	position: fixed;
-	bottom: 0;
-	font-family:"montserratbold";
-	font-size:2rem;
-	text-transform:uppercase;
-}
+//Location
+
+
+    .location-marker-container{
+        display: flex;
+        justify-content: flex-start;
+        margin: 2rem;
+    }
+
+    .location-content-container{
+        @include desktop{
+            display:flex;
+        }
+    }
+
+    .map-content-container{
+        padding:0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        h2{
+            text-align:center;
+            text-transform:uppercase;
+            font-family:'raleway';
+            margin-left:2rem;
+            font-size:2rem;
+            color:white;
+            letter-spacing:3px;
+        }
+        .fa-map-marker{
+            font-size:5rem;
+            color:white;
+        }
+    }
+
+    .content-container, .perks-container{
+        border-left: 8px solid #fff;
+        margin-left: 20%;
+        transform: translate(-20%);
+        border-radius: 20px;
+        line-height: 1;
+        padding-left: 2rem;
+        margin-top: 1.5rem;
+            
+                p{
+                    color:#fff;
+                    text-transform:uppercase;
+                }
+                h3{
+                    color:white;
+                    font-family:'montserratbold';
+                }
+    }

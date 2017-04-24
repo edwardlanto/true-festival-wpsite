@@ -103,12 +103,16 @@
 
     //News Section
 
+    .news-section{
+        background:url('../../images/black-background-design.jpg')no-repeat center;
+        background-size:cover;
+    }
+
     .news-post-wrapper{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding:30px 15px 0 15px;
-        background-color:black;
         padding-bottom:5rem;
             @include desktop{
                 flex-direction:row;
@@ -296,17 +300,15 @@
     .news-button-container{
         display: flex;
         justify-content: center;
-        background-color: #000;
-
     }
 
     //Folding Cube
 
     .folding-cube-container{
         position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
         z-index:100;
         display:flex;
         align-items:center;
@@ -452,12 +454,15 @@
 
     .artist-section{
         height: 33rem;
-        padding:3rem 0;
         background:url('../../images/black-background-design.jpg');
         background-size:cover;
             @include desktop{
                 height:900px;
             }
+    }
+
+    .artist-home-header{
+        margin-bottom:20px;
     }
 
     .main-carousel{
@@ -591,58 +596,6 @@
         iframe{
             max-width:none;
         }
-    }
-
-    .location-marker-container{
-        display: flex;
-        justify-content: flex-start;
-        margin: 2rem;
-    }
-
-    .location-content-container{
-        @include desktop{
-            display:flex;
-        }
-    }
-
-    .map-content-container{
-        padding:0 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-        h2{
-            text-align:center;
-            text-transform:uppercase;
-            font-family:'raleway';
-            margin-left:2rem;
-            font-size:2rem;
-            color:white;
-            letter-spacing:3px;
-        }
-        .fa-map-marker{
-            font-size:5rem;
-            color:white;
-        }
-    }
-
-    .content-container, .perks-container{
-        border-left: 8px solid #fff;
-        margin-left: 20%;
-        transform: translate(-20%);
-        border-radius: 20px;
-        line-height: 1;
-        padding-left: 2rem;
-        margin-top: 1.5rem;
-            
-                p{
-                    color:#fff;
-                    text-transform:uppercase;
-                }
-                h3{
-                    color:white;
-                    font-family:'montserratbold';
-                }
     }
 
     //Gallery Section

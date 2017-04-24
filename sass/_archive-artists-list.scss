@@ -123,9 +123,10 @@
         width: 150px;
         display: flex;
         justify-content: space-between;
+        transition:all 0.5s linear;
             i:hover{
-                color:#e10684;
                 cursor:pointer;
+                color:#000;
             }
     }
 

@@ -139,6 +139,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     background-color: #E10684;
     border-radius: 12px; }
 
+.home .news-section {
+  background: url("../../images/black-background-design.jpg") no-repeat center;
+  background-size: cover; }
+
 .home .news-post-wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +151,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 30px 15px 0 15px;
-  background-color: black;
   padding-bottom: 5rem; }
   @media (min-width: 830px) {
     .home .news-post-wrapper {
@@ -321,8 +324,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
-  background-color: #000; }
+      justify-content: center; }
 
 .home .folding-cube-container {
   position: fixed;
@@ -426,12 +428,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .artist-section {
   height: 33rem;
-  padding: 3rem 0;
   background: url("../../images/black-background-design.jpg");
   background-size: cover; }
   @media (min-width: 830px) {
     .home .artist-section {
       height: 900px; } }
+
+.home .artist-home-header {
+  margin-bottom: 20px; }
 
 .home .main-carousel {
   padding: 0;
@@ -529,55 +533,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .map iframe {
   max-width: none; }
-
-.home .location-marker-container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  margin: 2rem; }
-
-@media (min-width: 830px) {
-  .home .location-content-container {
-    display: -ms-flexbox;
-    display: flex; } }
-
-.home .map-content-container {
-  padding: 0 2rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
-  .home .map-content-container h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'raleway';
-    margin-left: 2rem;
-    font-size: 2rem;
-    color: white;
-    letter-spacing: 3px; }
-  .home .map-content-container .fa-map-marker {
-    font-size: 5rem;
-    color: white; }
-
-.home .content-container, .home .perks-container {
-  border-left: 8px solid #fff;
-  margin-left: 20%;
-  transform: translate(-20%);
-  border-radius: 20px;
-  line-height: 1;
-  padding-left: 2rem;
-  margin-top: 1.5rem; }
-  .home .content-container p, .home .perks-container p {
-    color: #fff;
-    text-transform: uppercase; }
-  .home .content-container h3, .home .perks-container h3 {
-    color: white;
-    font-family: 'montserratbold'; }
 
 .home .gallery-list {
   padding: 0;
@@ -952,7 +907,7 @@ th {
   font-style: lighter; }
 
 @font-face {
-  font-family: 'raleway';
+  font-family: 'ralewaymedium';
   src: url("../../fonts/raleway-medium-webfont.eot");
   src: url("../../fonts/raleway-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-medium-webfont.woff2") format("woff2"), url("../../fonts/raleway-medium-webfont.woff") format("woff"), url("../../fonts/raleway-medium-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -1205,7 +1160,7 @@ table {
   text-transform: uppercase;
   font-family: 'raleway';
   padding: 10px 0;
-  font-size: 2rem;
+  font-size: 20px;
   margin: 0;
   background-color: #262f65;
   color: white;
@@ -1291,21 +1246,54 @@ a {
   -ms-flex-pack: center;
       justify-content: center; }
 
-.fixed-buy-button {
-  height: 50px;
-  background: #f5ea9b;
+.location-marker-container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  margin: 2rem; }
+
+@media (min-width: 830px) {
+  .location-content-container {
+    display: -ms-flexbox;
+    display: flex; } }
+
+.map-content-container {
+  padding: 0 2rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
-      align-items: center;
-  z-index: 100;
-  position: fixed;
-  bottom: 0;
-  font-family: "montserratbold";
-  font-size: 2rem;
-  text-transform: uppercase; }
+      align-items: center; }
+  .map-content-container h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'raleway';
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 3px; }
+  .map-content-container .fa-map-marker {
+    font-size: 5rem;
+    color: white; }
+
+.content-container, .perks-container {
+  border-left: 8px solid #fff;
+  margin-left: 20%;
+  transform: translate(-20%);
+  border-radius: 20px;
+  line-height: 1;
+  padding-left: 2rem;
+  margin-top: 1.5rem; }
+  .content-container p, .perks-container p {
+    color: #fff;
+    text-transform: uppercase; }
+  .content-container h3, .perks-container h3 {
+    color: white;
+    font-family: 'montserratbold'; }
 
 .page-template-archive-artist_post_type .page-header, .post-type-archive-artist_post_type .page-header {
   display: none; }
@@ -1416,10 +1404,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  transition: all 0.5s linear; }
   .page-template-archive-artist_post_type .archive-artist-icons i:hover, .post-type-archive-artist_post_type .archive-artist-icons i:hover {
-    color: #e10684;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #000; }
 
 .page-template-archive-artist_post_type .artist-list-item, .post-type-archive-artist_post_type .artist-list-item {
   transition: all 0.3s linear;
@@ -1754,19 +1743,12 @@ input[type="submit"] {
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
   background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
   padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -2035,16 +2017,16 @@ a {
   top: 45px; }
 
 .menu-menu-1-container {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   position: relative;
-  top: 25%; }
+  top: 25%;
+  margin-right: 20px; }
   .menu-menu-1-container a {
     font-family: 'montserratmedium';
     text-shadow: 2px 2px 14px #000;
     color: #fff;
-    padding: 0.2rem 1.2rem; }
+    padding: 0.2rem; }
 
 .current_page_item a {
   color: #e10684;
@@ -2072,17 +2054,6 @@ a {
     border-bottom: 2px solid #fff; }
     .footer-list li:hover {
       color: #f5ea9b; }
-
-.fixed-buy-button-container {
-  width: 100%;
-  height: 90px;
-  z-index: 100;
-  position: fixed;
-  bottom: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -2141,6 +2112,66 @@ a {
   content: "";
   display: table; }
 
+.page-id-138 .status-publish {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.page-id-138 .entry-header {
+  display: none; }
+
+.page-id-138 .question-header {
+  text-align: center; }
+
+.page-id-138 #main {
+  background: url("../../images/black-swirl-background.jpg") no-repeat center;
+  background-size: cover; }
+
+.page-id-138 .p-last-child {
+  margin-bottom: 0; }
+
+.page-id-138 .question-header {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: 'montserratextrabold'; }
+
+.page-id-138 .heading-label {
+  color: #fff;
+  text-transform: uppercase; }
+
+.page-id-138 .main-submit {
+  box-shadow: none;
+  background: #f5ea9b;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: 'montserratextrabold';
+  color: #000;
+  box-shadow: 9px 8px 0px 0px #fff; }
+  .page-id-138 .main-submit:hover {
+    transform: rotate(360deg); }
+
+.page-id-138 .wpcf7-response-output {
+  color: #fff; }
+
+.page-id-138 #site-navigation {
+  box-shadow: none; }
+
+.page-id-138 .location-content-container {
+  padding-bottom: 2rem; }
+  @media (min-width: 830px) {
+    .page-id-138 .location-content-container h3 {
+      font-size: 3rem; } }
+
+.page-id-138 .social {
+  display: none; }
+  @media (min-width: 830px) {
+    .page-id-138 .social {
+      display: block; } }
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -2191,6 +2222,58 @@ a {
 
 .bypostauthor {
   display: block; }
+
+@media (min-width: 830px) {
+  .single-post #main {
+    background: linear-gradient(180deg, rgba(225, 6, 132, 0.16) 0, rgba(225, 6, 132, 0.07)), url("../../images/dash-berlin-news-background.jpg");
+    background-size: cover,cover; } }
+
+.single-post .image-container {
+  position: relative; }
+  @media (min-width: 830px) {
+    .single-post .image-container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      padding-top: 2rem; } }
+  .single-post .image-container img {
+    max-width: 100%; }
+    @media (min-width: 830px) {
+      .single-post .image-container img {
+        border: 5px solid #fff; } }
+
+@media (min-width: 830px) {
+  .single-post .section-header {
+    display: none; } }
+
+.single-post #site-navigation {
+  box-shadow: none;
+  background: transparent; }
+
+.single-post .news-content-container {
+  padding: 1rem;
+  background-color: #000; }
+  @media (min-width: 830px) {
+    .single-post .news-content-container {
+      background-color: transparent; } }
+  .single-post .news-content-container p {
+    margin: 0;
+    color: #fff; }
+    @media (min-width: 830px) {
+      .single-post .news-content-container p {
+        font-size: 1.5rem;
+        border: 3px solid #fff;
+        padding: 0.5rem; } }
+
+.single-post .post-date-container {
+  position: absolute;
+  bottom: 10px;
+  z-index: 100;
+  width: 200px;
+  left: 30px;
+  color: #fff;
+  font-family: 'montserratmedium'; }
 
 /*--------------------------------------------------------------
 # Media

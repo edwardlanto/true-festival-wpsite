@@ -9,15 +9,12 @@
 
 			</div><!-- #content -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="fixed-buy-button-container">
-				<a class="fixed-buy-button">Buy Now</a>
-			</div>	
-			<ul class="footer-list">
-				<a href="home"><li>Home</li></a>
-				<a href="artists"><li>Artists</li></a>
-				<a href="gallery"><li>Media</li></a>
-				<a href="news"><li>News</li></a>
-			</ul>
+				<ul class="footer-list">
+					<a href="home"><li>Home</li></a>
+					<a href="artists"><li>Artists</li></a>
+					<a href="gallery"><li>Media</li></a>
+					<a href="news"><li>News</li></a>
+				</ul>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

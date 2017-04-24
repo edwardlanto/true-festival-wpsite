@@ -168,14 +168,15 @@ a {
 	}
 
 	.menu-menu-1-container{
-    	align-self: center;
+    	align-self:flex-end;
     	position: relative;
     	top: 25%;
+		margin-right:20px;
 			a{
 				font-family: 'montserratmedium';
     			text-shadow: 2px 2px 14px #000;
 				color:#fff;	
-    			padding: 0.2rem 1.2rem;;
+    			padding: 0.2rem;
 			}
 	}
 

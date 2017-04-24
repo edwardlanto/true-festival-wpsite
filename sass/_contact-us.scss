@@ -1,0 +1,75 @@
+.page-id-138{
+    
+    .status-publish{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .entry-header{
+        display:none;
+    }
+
+    .question-header{
+        text-align:center;
+    }
+
+    #main{
+        background:url('../../images/black-swirl-background.jpg')no-repeat center;
+        background-size:cover;
+    }
+
+    .p-last-child{
+        margin-bottom:0;
+    }
+
+    .question-header{
+        color:#fff;
+        text-transform:uppercase;
+        font-size:2rem;
+        font-family:'montserratextrabold';
+    }
+
+    .heading-label{
+        color:#fff;
+        text-transform:uppercase;
+    }
+
+    .main-submit{
+        box-shadow:none;
+        background:$main__yellow;
+        text-transform:uppercase;
+        font-size:2rem;
+        font-family:'montserratextrabold';
+        color:#000;
+        box-shadow: 9px 8px 0px 0px #fff;
+            &:hover{
+                transform:rotate(360deg);
+
+            }
+    }
+
+    .wpcf7-response-output{
+        color:#fff;
+    }
+
+    #site-navigation{
+        box-shadow:none;
+    }
+
+    .location-content-container{
+        padding-bottom:2rem;
+        h3{
+            @include desktop{
+                font-size:3rem;
+            }
+        }
+    }
+
+    .social{
+        display:none;
+            @include desktop{
+                display:block;
+            }
+    }
+}//page-id-138 wrapper
