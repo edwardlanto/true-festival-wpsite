@@ -21,6 +21,8 @@ get_header(); ?>
 				<h3>Media</h3>
 			</div>
 			<div class="gallery-list-container">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/escape-logo-marble.jpg" class="media-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/party-background.jpg" class="media-background">
 				<ul class="archive-gallery-list">
 				<?php $loop = new WP_Query( array( 'post_type' => 'gallery_post_type', 'posts_per_page' => -1 ) ); ?>
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

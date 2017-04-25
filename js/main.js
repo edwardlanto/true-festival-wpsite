@@ -67,6 +67,15 @@
 
     resize();
 
+    function mobileResize(){
+        if(WideWindow.width() <= 450){
+            $('.news-title').css({"left":"40%"});
+        }else{
+            $('.news-title').css({"left":"0%"});
+        }
+    }
+
+    mobileResize();
     $('.read-more').on('click', function(){
         if($(this).text() == 'Read More'){
             $(this).text('Read Less')

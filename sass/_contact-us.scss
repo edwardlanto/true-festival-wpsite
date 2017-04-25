@@ -72,4 +72,11 @@
                 display:block;
             }
     }
+
+    .wpcf7-form-control{
+        max-width:80vw;
+            @include desktop{
+                max-width:none;
+            }
+    }
 }//page-id-138 wrapper

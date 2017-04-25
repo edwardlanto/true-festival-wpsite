@@ -7,7 +7,6 @@
 
     .section-header{
         padding:0;  
-        margin-bottom: 7px;
             h3{
                 margin:0;
             }
@@ -53,17 +52,31 @@
     }
 
     .gallery-list-container{
-        @include desktop{
-            display:none;
-        }
+        position:relative;
+            @include desktop{
+                display:none;
+            }
+    }
+
+    .media-logo{
+        position:absolute;
+        top:0;
+        z-index:10;
+        opacity:0.5
+    }
+
+    .media-background{
+        position:absolute;
+        top:0;
     }
 
     .archive-gallery-list{
         display:flex;
         flex-wrap:wrap;
         justify-content:space-around;
-        background:url('../../images/smoke-background.jpg')no-repeat center;
-        background-size:cover;
+        z-index: 100;
+        position: absolute;
+        top: 23rem;
             @include desktop{
                 display:block;
                 background:none;
@@ -76,18 +89,23 @@
         min-height: 38vw;
         border: 2px solid #fff;
         max-width: 400px;
-        transition:all 0.3s linear;
+        transition:all 0.3s ease-in;
         cursor:pointer;
-        box-shadow: 0px 0px 1px 2px #000;
         margin-bottom:1rem;
-         @include desktop{
-             min-width:100vw;
-             height:100%;
-             box-shadow:none;
-             border-top:none;
-             border-bottom:none;
-         }
+            @include desktop{
+                min-width:100vw;
+                height:100%;
+                box-shadow:none;
+                border-top:none;
+                border-bottom:none;
+
+            }
     }
+
+    .gallery-image-container:first-child{
+        width:90vw;
+    }
+
 
     .flickity-viewport{
         @include desktop{
@@ -242,6 +260,7 @@
         padding-bottom:1rem;
         width:13rem;
         justify-content:space-between;
+        margin:0 auto;
             @include desktop{
                 margin-left: 3rem;
                 width:25rem;

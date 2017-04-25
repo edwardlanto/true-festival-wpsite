@@ -1,72 +1,72 @@
-.single-post{
+// .single-post{
 
-    #main{
-        @include desktop{
-            background:linear-gradient(180deg,rgba(225,6,132,.16) 0,rgba(225,6,132,0.07)),
-            url('../../images/dash-berlin-news-background.jpg');
-            background-size:cover,cover;
-        }
-    }
+//     #main{
+//         @include desktop{
+//             background:linear-gradient(180deg,rgba(225,6,132,.16) 0,rgba(225,6,132,0.07)),
+//             url('../../images/dash-berlin-news-background.jpg');
+//             background-size:cover,cover;
+//         }
+//     }
 
-    .image-container{
-        position:relative;
-        display:flex;
-        justify-content:center;
-        background-color:#000;
-            @include desktop{
-                padding-top:2rem;
-            }
-        img{
-            max-width: 100%;
-                @include desktop{
-                    border:5px solid #fff;
-                }
-        }
-    }
+//     .image-container{
+//         position:relative;
+//         display:flex;
+//         justify-content:center;
+//         background-color:#000;
+//             @include desktop{
+//                 padding-top:2rem;
+//             }
+//         img{
+//             max-width: 100%;
+//                 @include desktop{
+//                     border:5px solid #fff;
+//                 }
+//         }
+//     }
 
-    .section-header{
-        @include desktop{
-            display:none;
-        }
-    }
+//     .section-header{
+//         @include desktop{
+//             display:none;
+//         }
+//     }
 
-    #site-navigation{
-        box-shadow:none;
-        background:transparent;
-    }
+//     #site-navigation{
+//         box-shadow:none;
+//         background:transparent;
+//     }
 
-    .news-content-container{
-        padding:1rem;
-        background-color:#000;
-            @include desktop{
-                background-color:transparent;
-            }
-            p{
-                margin:0;
-                color:#fff;
-                    @include desktop{
-                        font-size: 1.5rem;
-                        border: 3px solid #fff;
-                        padding: 0.5rem;
-                    }
-            }
-    }
+//     .news-content-container{
+//         padding:1rem;
+//         background-color:#000;
+//             @include desktop{
+//                 background-color:transparent;
+//             }
+//             p{
+//                 margin:0;
+//                 color:#fff;
+//                     @include desktop{
+//                         font-size: 1.5rem;
+//                         border: 3px solid #fff;
+//                         padding: 0.5rem;
+//                     }
+//             }
+//     }
 
-    .post-date-container{
-        position: absolute;
-        bottom: 10px;
-        z-index: 100;
-        width: 200px;
-        left: 30px;
-        color:#fff;
-        font-family:'montserratmedium';
-    }
+//     .post-date-container{
+//         position: absolute;
+//         bottom: 10px;
+//         z-index: 100;
+//         width: 200px;
+//         left: 30px;
+//         color:#fff;
+//         font-family:'montserratmedium';
+//     }
 
-    .archive-header{
-        @include desktop{
-            margin-bottom:89px;
-        }
-    }
+//     .archive-header{
+//         @include desktop{
+//             margin-bottom:89px;
+//         }
+//     }
 
 
-}//Single Post Wrapper
+// }//Single Post Wrapper

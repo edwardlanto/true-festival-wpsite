@@ -1423,8 +1423,7 @@ a {
     padding: 0;
     margin: 0; }
   .page-template-archive-gallery_post_type .section-header, .post-type-archive-gallery_post_type .section-header {
-    padding: 0;
-    margin-bottom: 7px; }
+    padding: 0; }
     .page-template-archive-gallery_post_type .section-header h3, .post-type-archive-gallery_post_type .section-header h3 {
       margin: 0; }
     @media (min-width: 830px) {
@@ -1451,9 +1450,19 @@ a {
     @media (min-width: 830px) {
       .page-template-archive-gallery_post_type .wp-post-image, .post-type-archive-gallery_post_type .wp-post-image {
         max-height: 400px; } }
-  @media (min-width: 830px) {
-    .page-template-archive-gallery_post_type .gallery-list-container, .post-type-archive-gallery_post_type .gallery-list-container {
-      display: none; } }
+  .page-template-archive-gallery_post_type .gallery-list-container, .post-type-archive-gallery_post_type .gallery-list-container {
+    position: relative; }
+    @media (min-width: 830px) {
+      .page-template-archive-gallery_post_type .gallery-list-container, .post-type-archive-gallery_post_type .gallery-list-container {
+        display: none; } }
+  .page-template-archive-gallery_post_type .media-logo, .post-type-archive-gallery_post_type .media-logo {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    opacity: 0.5; }
+  .page-template-archive-gallery_post_type .media-background, .post-type-archive-gallery_post_type .media-background {
+    position: absolute;
+    top: 0; }
   .page-template-archive-gallery_post_type .archive-gallery-list, .post-type-archive-gallery_post_type .archive-gallery-list {
     display: -ms-flexbox;
     display: flex;
@@ -1461,8 +1470,9 @@ a {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background: url("../../images/smoke-background.jpg") no-repeat center;
-    background-size: cover; }
+    z-index: 100;
+    position: absolute;
+    top: 23rem; }
     @media (min-width: 830px) {
       .page-template-archive-gallery_post_type .archive-gallery-list, .post-type-archive-gallery_post_type .archive-gallery-list {
         display: block;
@@ -1473,9 +1483,8 @@ a {
     min-height: 38vw;
     border: 2px solid #fff;
     max-width: 400px;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-in;
     cursor: pointer;
-    box-shadow: 0px 0px 1px 2px #000;
     margin-bottom: 1rem; }
     @media (min-width: 830px) {
       .page-template-archive-gallery_post_type .gallery-image-container, .post-type-archive-gallery_post_type .gallery-image-container {
@@ -1484,6 +1493,8 @@ a {
         box-shadow: none;
         border-top: none;
         border-bottom: none; } }
+  .page-template-archive-gallery_post_type .gallery-image-container:first-child, .post-type-archive-gallery_post_type .gallery-image-container:first-child {
+    width: 90vw; }
   @media (min-width: 830px) {
     .page-template-archive-gallery_post_type .flickity-viewport, .post-type-archive-gallery_post_type .flickity-viewport {
       height: 400px !important; } }
@@ -1586,7 +1597,8 @@ a {
     padding-bottom: 1rem;
     width: 13rem;
     -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+    margin: 0 auto; }
     @media (min-width: 830px) {
       .page-template-archive-gallery_post_type .social-header-container, .post-type-archive-gallery_post_type .social-header-container {
         margin-left: 3rem;
@@ -1629,17 +1641,22 @@ a {
   text-transform: uppercase;
   width: 100%;
   text-align: center;
-  width: 200px;
+  width: 180px;
   top: 0;
   font-family: 'steiner';
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  font-size: 15px;
+  max-width: 180px; }
   @media (min-width: 830px) {
     .blog .news-title {
       background-color: rgba(226, 5, 132, 0.5);
       top: -72px;
       left: 31px;
       font-family: 'montserratmedium';
-      letter-spacing: 0; } }
+      letter-spacing: 0;
+      max-width: none;
+      width: 400px;
+      height: 40px; } }
 
 .blog .dropdown-container {
   padding: 0 1rem; }
@@ -1704,7 +1721,8 @@ a {
     margin-bottom: 4rem;
     z-index: 20;
     box-shadow: 1px 1px 74px 7px #1e264e;
-    border: 4px solid #fff; } }
+    border: 4px solid #fff;
+    max-height: 350px; } }
 
 .blog .dropdown-wrapper {
   background-color: #000; }
@@ -2175,6 +2193,12 @@ a {
     .page-id-138 .social {
       display: block; } }
 
+.page-id-138 .wpcf7-form-control {
+  max-width: 80vw; }
+  @media (min-width: 830px) {
+    .page-id-138 .wpcf7-form-control {
+      max-width: none; } }
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -2225,63 +2249,6 @@ a {
 
 .bypostauthor {
   display: block; }
-
-@media (min-width: 830px) {
-  .single-post #main {
-    background: linear-gradient(180deg, rgba(225, 6, 132, 0.16) 0, rgba(225, 6, 132, 0.07)), url("../../images/dash-berlin-news-background.jpg");
-    background-size: cover,cover; } }
-
-.single-post .image-container {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  background-color: #000; }
-  @media (min-width: 830px) {
-    .single-post .image-container {
-      padding-top: 2rem; } }
-  .single-post .image-container img {
-    max-width: 100%; }
-    @media (min-width: 830px) {
-      .single-post .image-container img {
-        border: 5px solid #fff; } }
-
-@media (min-width: 830px) {
-  .single-post .section-header {
-    display: none; } }
-
-.single-post #site-navigation {
-  box-shadow: none;
-  background: transparent; }
-
-.single-post .news-content-container {
-  padding: 1rem;
-  background-color: #000; }
-  @media (min-width: 830px) {
-    .single-post .news-content-container {
-      background-color: transparent; } }
-  .single-post .news-content-container p {
-    margin: 0;
-    color: #fff; }
-    @media (min-width: 830px) {
-      .single-post .news-content-container p {
-        font-size: 1.5rem;
-        border: 3px solid #fff;
-        padding: 0.5rem; } }
-
-.single-post .post-date-container {
-  position: absolute;
-  bottom: 10px;
-  z-index: 100;
-  width: 200px;
-  left: 30px;
-  color: #fff;
-  font-family: 'montserratmedium'; }
-
-@media (min-width: 830px) {
-  .single-post .archive-header {
-    margin-bottom: 89px; } }
 
 /*--------------------------------------------------------------
 # Media
